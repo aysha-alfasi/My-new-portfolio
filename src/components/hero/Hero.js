@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import avatar from "../../imgs/smallAvatar.png";
 import "./Hero.css";
 
-const Hero = () => {
+const Hero = ({ scrollToSection }) => {
   return (
-    <div className="hero">
+    <section className="hero">
       <div className="stars">
         <svg width="100%" height="100%">
           <circle
@@ -45,9 +45,9 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
         >
-          <h1>
+          
             Hello, I'm <span className="highlight">Aisha</span>
-          </h1>
+          
         </motion.h1>
 
         <motion.h2
@@ -63,7 +63,9 @@ const Hero = () => {
           <motion.button
             className="btn"
             whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => scrollToSection("work")}
+            transition={{ type: "spring", stiffness: 200 }}
           >
             View Work
           </motion.button>
@@ -72,6 +74,7 @@ const Hero = () => {
             className="btn"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
+            onClick={() => scrollToSection("contact")}
           >
             Contact
           </motion.button>
@@ -79,6 +82,7 @@ const Hero = () => {
             className="btn"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
+            onClick={() => scrollToSection("skills")}
           >
             My Skills
           </motion.button>
@@ -86,12 +90,13 @@ const Hero = () => {
             className="btn"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
+            onClick={() => scrollToSection("blog")}
           >
             My Blog
           </motion.button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

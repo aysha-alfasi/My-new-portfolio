@@ -1,0 +1,7 @@
+.section {
+    background: linear-gradient(to bottom, #fdfbff, #f7f3fc);
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 100px 20px;
+    min-height: 100vh;
+  }
