@@ -1,7 +1,174 @@
 .section {
-    background: linear-gradient(to bottom, #fdfbff, #f7f3fc);
-    background-attachment: fixed;
-    background-size: cover;
-    padding: 100px 20px;
-    min-height: 100vh;
+  background: linear-gradient(135deg, #2c2c54, #6a5acd);
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 100px 20px;
+  min-height: 100vh;
+  color: white;
+  padding: 60px 20px;
+  border-radius: 15px;
+  animation: gradientRotate 20s ease infinite;
+}
+
+@keyframes gradientRotate {
+  0% {
+    background-position: 50% 0%;
   }
+
+  100% {
+    background-position: 50% 0%;
+  }
+}
+
+.work-section h2 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.05em;
+  margin-top: 170px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.btns-work-sec {
+  display: flex;
+  flex-direction: row;
+}
+
+.work-section button {
+  padding: 10px 25px;
+  width: 100px;
+  margin: 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  background: white;
+  color: #6b38ae;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.work-section button:hover {
+  background: #fddcf0;
+  box-shadow: 0 10px 18px rgba(67, 65, 144, 0.4);
+  transform: translateY(-3px);
+}
+
+.work-section button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(67, 65, 144, 0.25);
+}
+
+@media (max-width: 700px) {
+  .work-section {
+    padding: 2rem 1rem;
+  }
+  .work-section h2 {
+    font-size: 2.2rem;
+  }
+  .work-section button {
+    padding: 0.6rem 1.8rem;
+    font-size: 1rem;
+    margin: 10px 6px;
+  }
+}
+
+.work-section {
+  padding: 2rem 1.5rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.filter-buttons button {
+  padding: 0.5rem 0.8rem;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.filter-buttons button:hover,
+.filter-buttons .active {
+  background: #fddcf0;
+  border-color: #fddcf0;
+  color: #111;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  width: 200px;
+  height: 280px;
+  padding: 1rem;
+  border-radius: 16%;
+  overflow: hidden;
+  text-align: center;
+  color: rgba(255, 225, 245, 0.888);
+  text-decoration: none !important;
+}
+
+.project-card img {
+  transition: all 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.project-card:hover img {
+  animation: none;
+}
+
+.project-card:nth-child(1) img {
+  animation-delay: 3s;
+}
+
+.project-card:nth-child(2) img {
+  animation-delay: 3.7s;
+}
+
+.project-card:nth-child(3) img {
+  animation-delay: 4.3s;
+}
+
+.project-card:nth-child(4) img {
+  animation-delay: 5s;
+}
+
+.project-card:nth-child(5) img {
+  animation-delay: 5.7s;
+}
+
+.project-card:nth-child(6) img {
+  animation-delay: 6.3s;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project-info {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover .project-info {
+  opacity: 1;
+}
