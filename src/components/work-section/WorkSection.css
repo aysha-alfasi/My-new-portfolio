@@ -1,4 +1,4 @@
-.section {
+.section-work {
   background: linear-gradient(135deg, #2c2c54, #6a5acd);
   background-attachment: fixed;
   background-size: cover;
@@ -6,7 +6,6 @@
   min-height: 100vh;
   color: white;
   padding: 60px 20px;
-  border-radius: 15px;
   animation: gradientRotate 20s ease infinite;
 }
 
@@ -20,12 +19,12 @@
   }
 }
 
-.work-section h2 {
+.section-work h2 {
   font-size: 2.8rem;
   font-weight: 600;
-  margin-bottom: 1.2rem;
   letter-spacing: 0.05em;
-  margin-top: 170px;
+  margin: 150px 0 50px;
+  text-align: center;
   color: rgba(255, 255, 255, 0.85);
 }
 
@@ -34,7 +33,7 @@
   flex-direction: row;
 }
 
-.work-section button {
+.section-work button {
   padding: 10px 25px;
   width: 100px;
   margin: 10px;
@@ -50,32 +49,32 @@
   user-select: none;
 }
 
-.work-section button:hover {
+.section-work button:hover {
   background: #fddcf0;
   box-shadow: 0 10px 18px rgba(67, 65, 144, 0.4);
   transform: translateY(-3px);
 }
 
-.work-section button:active {
+.section-work button:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(67, 65, 144, 0.25);
 }
 
 @media (max-width: 700px) {
-  .work-section {
+  .section-work {
     padding: 2rem 1rem;
   }
-  .work-section h2 {
+  .section-work h2 {
     font-size: 2.2rem;
   }
-  .work-section button {
+  .section-work button {
     padding: 0.6rem 1.8rem;
     font-size: 1rem;
     margin: 10px 6px;
   }
 }
 
-.work-section {
+.section-work {
   padding: 2rem 1.5rem;
   margin: 0 auto;
   text-align: center;

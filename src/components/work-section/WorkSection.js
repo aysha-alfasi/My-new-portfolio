@@ -39,8 +39,7 @@ const projects = [
     description: "with Figma",
     longDescription: "",
     techIcons: [figma],
-    link: "#",
-    githubLink: "https://github.com/your-repo",
+    link: "https://www.figma.com/proto/3A5RCZ4FeBeNpLI2CbJOv1/The-Purple-Card-%F0%9F%9B%B8?node-id=4-69&t=SC3eNmcSWr3vM56L-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
     imageUrl: purpleUI,
     category: "uiux",
   },
@@ -50,8 +49,7 @@ const projects = [
     description: "infos later",
     longDescription: "",
     techIcons: [figma, inkscape],
-    link: "#",
-    githubLink: "https://github.com/your-repo",
+    link: "https://www.figma.com/proto/BNQigaKaZWRfORE3MyEtnk/Miss-Tasks?node-id=4-50&p=f&t=CguGXD7XApzPuM1w-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A50",
     imageUrl: missTasks,
     category: "uiux",
   },
@@ -60,7 +58,7 @@ const projects = [
     title: "Todo List",
     description: "Cute Todo project",
     longDescription:
-      "This is my simple yet super cute Todo React project. With this Project we can add a new task🌼, set a task as completed⭐, Delete a task🤍 and sort completed and active tasks or view them all✨. I used redux-toolkit for the state managing and I used Framer-Motion for some animations. The cute github icon below will take to the README.md of the project, you can have a look to the code there as well😊",
+      "A cute and simple Todo app built with React 🌼. Users can add, complete, delete, and filter tasks ✨. It uses Redux Toolkit for state and Framer Motion for smooth animations. The GitHub button links to the project’s README 💻⭐.",
     techIcons: [react, redux, framerMotion],
     link: "#",
     githubLink: "https://github.com/aysha-alfasi/my-todo-app",
@@ -71,10 +69,10 @@ const projects = [
     id: 5,
     title: "Journaling App",
     description: "infos later",
-    longDescription: "",
+    longDescription:
+      "A cozy personal journal app built with React, Ant Design, and PostgreSQL. Users can write, edit, and explore their entries with moods 🌿💭. It includes mood stats 📊, secure login, and smooth UX powered by custom hooks and Redux Toolkit.",
     techIcons: [react, redux, node, express, postgre],
-    link: "#",
-    githubLink: "https://github.com/your-repo",
+    githubLink: "https://github.com/aysha-alfasi/personal-journal-app",
     imageUrl: journalApp,
     category: "web",
   },
@@ -82,10 +80,11 @@ const projects = [
     id: 6,
     title: "Miss Tasks App!",
     description: "infos later",
-    longDescription: "",
+    longDescription:
+      "Miss Tasks is a gentle productivity app that chats with you about your day 🌸💬. It responds to your mood using sentiment analysis and offers kind, supportive replies. Built with React, Bootstrap, and a Node.js backend with custom emotional logic 💡📝.",
     techIcons: [react, node, express],
-    link: "#",
-    githubLink: "https://github.com/your-repo",
+    link: "https://miss-tasks-app.onrender.com/",
+    githubLink: "https://github.com/aysha-alfasi/Miss-tasks-app-",
     imageUrl: missTasks,
     category: "web",
   },
@@ -93,10 +92,12 @@ const projects = [
     id: 7,
     title: "The Purple Card",
     description: "infos later",
-    longDescription: "",
+    longDescription:
+      "A playful idea-tracking app where users can manage idea cards 💭✨. Built with React and sound/alert effects for a fun UX. The backend runs on Motoko via DFINITY’s Internet Computer 💻🎉 — and there’s room for future magic! 🌈",
     techIcons: [react, definity, motoko],
-    link: "#",
-    githubLink: "https://github.com/your-repo",
+    link: "https://early-rocket-whispering.on-fleek.app/",
+    githubLink:
+      "https://github.com/aysha-alfasi/The-purple-card-full-DApp-project",
     imageUrl: purple,
     category: "web",
   },
@@ -106,8 +107,7 @@ const projects = [
     description: "infos later",
     longDescription: "",
     techIcons: [inkscape],
-    link: "#",
-    githubLink: "https://github.com/your-repo",
+    link: "https://my-portfolio-one-neon-21.vercel.app/graphics/Beary.jpg",
     imageUrl: Beary,
     category: "graphic",
   },
@@ -117,8 +117,7 @@ const projects = [
     description: "infos later",
     longDescription: "",
     techIcons: [inkscape],
-    link: "#",
-    githubLink: "https://github.com/your-repo",
+    link: "https://my-portfolio-one-neon-21.vercel.app/graphics/collection.pdf",
     imageUrl: missTasks,
     category: "graphic",
   },
@@ -139,7 +138,7 @@ const WorkSection = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.5 }}
-      className="section work-section"
+      className="section-work"
     >
       <h2>My Projects</h2>
 

@@ -1,23 +1,28 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;
+  padding: 20px;
+  overflow-y: auto;
 }
 
 .modal-content {
-  background-color: #3b3170;
+  background-color: #ffe5f1;
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.6);
   padding: 30px;
   border-radius: 16px;
   max-width: 600px;
   width: 90%;
-  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
   animation: fadeInUp 0.4s ease;
   text-align: center;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  -webkit-overflow-scrolling: touch;
 }
 
 @keyframes fadeInUp {
@@ -38,16 +43,17 @@ p {
 
 .modal-content h2 {
   margin-top: 30px;
-  color: rgb(245, 234, 255);
+  color: #363438;
+  font-size: 2.5rem;
 }
 
 .modal-content p {
   margin-top: 30px;
   font-family: "DM Sans", sans-serif;
-  color: #e6d9ff;
-  font-size: 1.3rem;
+  color: #363438;
+  font-size: 1.4rem;
   line-height: 1.9;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.3px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   text-align: justify;
@@ -77,13 +83,18 @@ p {
   width: 33px !important;
   height: 30px !important;
   padding: 0 !important;
-  background: none;
   border: none;
+  border-radius: 40px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   line-height: 30px !important;
+  background-color: #e6d9ff !important;
+}
+
+.close-button:hover {
+  background-color: #fddcf0 !important;
 }
 
 .tech-icons {
@@ -104,16 +115,18 @@ p {
   gap: 10px;
   flex-direction: row;
   justify-content: center;
+  margin-bottom: 60px;
 }
 .modal-buttons .btn {
   padding: 8px 20px;
-  width: 119px;
+  width: 150px;
+  height: 50px !important;
   margin: 10px;
   font-weight: bold;
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  background: #fddcf0;
+  background: #e6d9ff;
   color: rgb(37, 37, 37);
   text-decoration: none;
   transition: background 0.3s;
@@ -122,8 +135,9 @@ p {
   gap: 8px;
   flex-direction: row;
   justify-content: center;
+  font-size: 1.4rem;
 }
 
 .modal-buttons .btn:hover {
-  background: #fff9fd;
+  background: #fddcf0;
 }

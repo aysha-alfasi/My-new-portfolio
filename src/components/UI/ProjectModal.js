@@ -19,6 +19,7 @@ const ProjectModal = ({ project, onClose }) => {
           ×
         </button>
         <h2>{project.title}</h2>
+
         <p>{project.longDescription}</p>
 
         {
@@ -37,28 +38,36 @@ const ProjectModal = ({ project, onClose }) => {
         }
 
         <div className="modal-buttons">
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn"
-            style={{ height: 30 }}
-          >
-            View Project
-          </a>
-          <a
-            href={project.githubLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn secondary"
-          >
-            View Code{" "}
-            <img
-              src={gitHub}
-              alt="gitHub-icon"
-              style={{ width: 32, height: 32, borderRadius: 50 }}
-            />
-          </a>
+          {project.link ? (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+              style={{ height: 30 }}
+            >
+              View Project
+            </a>
+          ) : (
+            ""
+          )}
+          {project.githubLink ? (
+            <a
+              href={project.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn secondary"
+            >
+              View Code{" "}
+              <img
+                src={gitHub}
+                alt="gitHub-icon"
+                style={{ width: 32, height: 32, borderRadius: 50 }}
+              />
+            </a>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>
