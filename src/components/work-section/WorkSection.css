@@ -2,10 +2,9 @@
   background: linear-gradient(135deg, #2c2c54, #6a5acd);
   background-attachment: fixed;
   background-size: cover;
-  padding: 100px 20px;
   min-height: 100vh;
   color: white;
-  padding: 60px 20px;
+  padding: 35px 20px !important;
   animation: gradientRotate 20s ease infinite;
 }
 
@@ -19,13 +18,40 @@
   }
 }
 
-.section-work h2 {
-  font-size: 2.8rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  margin: 150px 0 50px;
+.work-section-title {
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1.5px;
+  padding-bottom: 12px;
+  font-size: 2.3rem;
+  font-weight: 700;
+  font-family: "Pangolin", serif;
   text-align: center;
-  color: rgba(255, 255, 255, 0.85);
+  margin: 150px auto 20px;
+  background: linear-gradient(135deg, #f8c8dc, #fddcf0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInDown 1s ease forwards;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  cursor: default;
+}
+
+.section-work h2:hover {
+  transform: scale(1.03);
+  text-shadow: 0 2px 8px rgba(255, 200, 230, 0.5);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .btns-work-sec {
@@ -84,7 +110,7 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin: 1.5rem 0;
+  margin-bottom: 90px;
 }
 
 .filter-buttons button {
@@ -127,7 +153,7 @@
 .project-card img {
   transition: all 0.3s ease;
   animation: float 3s ease-in-out infinite;
-  animation-delay: 2s;
+  animation-delay: 0.1s;
 }
 
 .project-card:hover img {

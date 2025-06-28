@@ -11,8 +11,9 @@
 }
 
 .modal-content {
-  background-color: #ffe5f1;
+  background-color: #b18edf;
   box-shadow: 0 4px 15px rgba(255, 182, 193, 0.6);
+  position: relative !important;
   padding: 30px;
   border-radius: 16px;
   max-width: 600px;
@@ -36,15 +37,19 @@
   }
 }
 
-.modal-content h2,
-p {
-  color: rgb(40, 40, 40);
+.modal-content p {
+  color: rgb(41, 40, 40) !important;
 }
 
 .modal-content h2 {
   margin-top: 30px;
-  color: #363438;
+  color: #492682;
   font-size: 2.5rem;
+  transform: translateY(20px);
+  opacity: 0;
+  font-family: "Pangolin";
+  animation: fadeInDown 1s ease forwards;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 .modal-content p {

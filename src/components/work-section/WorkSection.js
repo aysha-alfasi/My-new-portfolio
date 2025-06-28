@@ -79,7 +79,7 @@ const projects = [
   {
     id: 6,
     title: "Miss Tasks App!",
-    description: "infos later",
+    description: "Simple full-stack app",
     longDescription:
       "Miss Tasks is a gentle productivity app that chats with you about your day 🌸💬. It responds to your mood using sentiment analysis and offers kind, supportive replies. Built with React, Bootstrap, and a Node.js backend with custom emotional logic 💡📝.",
     techIcons: [react, node, express],
@@ -91,7 +91,7 @@ const projects = [
   {
     id: 7,
     title: "The Purple Card",
-    description: "infos later",
+    description: "Fun DApp",
     longDescription:
       "A playful idea-tracking app where users can manage idea cards 💭✨. Built with React and sound/alert effects for a fun UX. The backend runs on Motoko via DFINITY’s Internet Computer 💻🎉 — and there’s room for future magic! 🌈",
     techIcons: [react, definity, motoko],
@@ -113,7 +113,7 @@ const projects = [
   },
   {
     id: 9,
-    title: "Miss Tasks super three pages!",
+    title: "Productivity Collection",
     description: "infos later",
     longDescription: "",
     techIcons: [inkscape],
@@ -133,14 +133,8 @@ const WorkSection = () => {
   );
 
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -50 }}
-      transition={{ duration: 0.5 }}
-      className="section-work"
-    >
-      <h2>My Projects</h2>
+    <section className="section-work">
+      <h2 className="work-section-title">My Projects</h2>
 
       <div className="filter-buttons">
         <button
@@ -193,7 +187,7 @@ const WorkSection = () => {
         project={selectedProject}
         onClose={() => setSelectedProject(null)}
       />
-    </motion.section>
+    </section>
   );
 };
 

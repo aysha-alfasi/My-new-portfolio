@@ -18,7 +18,7 @@ const ProjectModal = ({ project, onClose }) => {
         <button className="close-button" onClick={onClose}>
           ×
         </button>
-        <h2>{project.title}</h2>
+        <h2 className="modal-title">{project.title}</h2>
 
         <p>{project.longDescription}</p>
 

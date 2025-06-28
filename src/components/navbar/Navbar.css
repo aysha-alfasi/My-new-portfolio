@@ -1,16 +1,17 @@
 .navbar {
   position: fixed;
+  background: linear-gradient(135deg, #2c2c54, #6a5acd);
+  background-attachment: fixed;
+  background-size: contain;
   top: 0;
   width: 100%;
-  margin-top: 7px;
-  background: none;
-/*   backdrop-filter: blur(10px);
- */  padding: 10px 20px;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   gap: 80px;
   z-index: 1000;
- }
+  margin-top: 0;
+  padding-top: 20px !important;
+}
 
 .navbar button {
   background: transparent;
@@ -23,4 +24,25 @@
 
 .navbar button:hover {
   color: pink;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    gap: 30px;
+    padding: 8px 12px;
+  }
+
+  .navbar button {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    gap: 20px;
+  }
+
+  .navbar button {
+    font-size: 0.85rem;
+  }
 }
