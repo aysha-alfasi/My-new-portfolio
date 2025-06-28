@@ -24,12 +24,12 @@
   position: relative;
   letter-spacing: 1.5px;
   padding-bottom: 12px;
-  font-size: 2.3rem;
+  font-size: 2.8rem !important;
   font-weight: 700;
   font-family: "Pangolin", serif;
   text-align: center;
   margin: 150px auto 20px;
-  background: linear-gradient(135deg, #f8c8dc, #fddcf0);
+  background: linear-gradient(135deg, #fddcf0, #c5aaf5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: translateY(20px);

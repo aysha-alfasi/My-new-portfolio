@@ -1,19 +1,136 @@
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import gitHub from "../../imgs/icons/gitHub.png";
+import In from "../../imgs/icons/in.png";
 
-const ContactSection = ({ scrollToSection }) => (
-  <motion.section
-    /* initial={{ opacity: 0, y: 50 }}
-    animate={{ opacity: 1, y: 0 }}
-    exit={{ opacity: 0, y: -50 }}
-    transition={{ duration: 0.5 }} */
-    className="section contact-section"
-  >
-    <h2>Contact Me</h2>
+import "./ContactSection.css";
 
-    <button onClick={() => scrollToSection("hero")}>Back to Home</button>
-    <button onClick={() => scrollToSection("work")}>Go to Work</button>
-    <button onClick={() => scrollToSection("skills")}>Go to Skills</button>
-  </motion.section>
-);
+const ContactSection = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  return (
+    <section className="contact-section" id="contact">
+      <div className="stars-bg" />
+      <h2
+        className="contact-title"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        Get In Touch
+      </h2>
+
+      <form className="contact-form">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          animate={{
+            boxShadow: [
+              "0 0 0px rgba(255, 255, 255, 0)",
+              "0 0 20px rgba(255, 255, 255, 0.4)",
+              "0 0 0px rgba(255, 255, 255, 0)",
+            ],
+          }}
+        >
+          <input
+            type="text"
+            name="name"
+            value={name}
+            placeholder="Your Name"
+            onChange={(e) => setName(e.target.value)}
+            className={name ? "filled" : ""}
+            required
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true }}
+          animate={{
+            boxShadow: [
+              "0 0 0px rgba(255, 255, 255, 0)",
+              "0 0 20px rgba(255, 255, 255, 0.4)",
+              "0 0 0px rgba(255, 255, 255, 0)",
+            ],
+          }}
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className={email ? "filled" : ""}
+            required
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+          viewport={{ once: true }}
+          animate={{
+            boxShadow: [
+              "0 0 0px rgba(255, 255, 255, 0)",
+              "0 0 20px rgba(255, 255, 255, 0.4)",
+              "0 0 0px rgba(255, 255, 255, 0)",
+            ],
+          }}
+        >
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            className={message ? "filled" : ""}
+            required
+          />
+        </motion.div>
+
+        <motion.button
+          type="submit"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          Send Message
+        </motion.button>
+      </form>
+
+      <motion.div
+        className="contact-links"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.8, duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <a
+          href="https://github.com/yourusername"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={gitHub} alt="github icon" />
+          GitHub
+        </a>
+        <a
+          href="https://linkedin.com/in/yourusername"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={In} alt="LinkedIn icon" />
+          LinkedIn
+        </a>
+      </motion.div>
+    </section>
+  );
+};
 
 export default ContactSection;

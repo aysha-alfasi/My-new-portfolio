@@ -20,7 +20,7 @@ const skills = [
   { name: "Redux", level: "intermediate", icon: [redux] },
   { name: "NodeJs", level: "intermediate", icon: [node] },
   { name: "Express", level: "intermediate", icon: [express] },
-  { name: "FramerMotion", level: "intermediate", icon: [framerMotion] },
+  { name: "Motion", level: "intermediate", icon: [framerMotion] },
   { name: "Miro", level: "intermediate", icon: [miro] },
   { name: "Figma", level: "intermediate", icon: [figma] },
   { name: "Inkscape", level: "advanced", icon: [inkscape] },
@@ -64,7 +64,7 @@ const SkillsSection = () => {
                       scale: [1, 1.15, 0.95, 1],
                       boxShadow: [
                         "0 0 0px rgba(255, 255, 255, 0)",
-                        "0 0 20px rgba(255, 255, 255, 0.4)",
+                        "0 0 20px rgb(255, 255, 255)",
                         "0 0 0px rgba(255, 255, 255, 0)",
                       ],
                     }
