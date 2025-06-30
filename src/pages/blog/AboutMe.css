@@ -1,0 +1,266 @@
+.about-me {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heart {
+  font-family: "Caveat";
+}
+.about-title {
+  font-size: 2.3rem;
+  margin-bottom: 150px;
+  margin-top: -10px;
+  color: #474747;
+  font-family: "Klee One";
+  text-align: center;
+}
+
+.about-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  text-align: left;
+}
+
+.about-img {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.img-button {
+  margin-top: -50px;
+}
+.about-text-and-toggles {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #444444e0;
+  text-align: justify;
+}
+
+.main-facts {
+  font-weight: 600;
+line-height: 3;
+color: #3a3a3a;
+font-family: "Klee One";
+
+
+}
+
+/* Toggle Section */
+
+.toggle-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.toggle-item {
+  flex: 1 1 calc(50% - 20px);
+  min-width: 250px;
+  background-color: none;
+  border-radius: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-item:hover {
+  background-color: none;
+}
+
+.toggle-question {
+  font-weight: 600;
+  color: #6e3d62;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  font-family: "Klee One";
+
+}
+
+.toggle-question.open {
+  color: #f48fb1;
+}
+
+.toggle-answer {
+  max-height: 0;
+  overflow: hidden;
+  font-size: 0.95rem;
+  color: #555;
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  font-size: 1.1rem;
+}
+
+.toggle-answer.show {
+  max-height: 200px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 8px;
+}
+
+.fade-in {
+  animation: fadeInSlide 0.6s ease-in;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toggle-item {
+  flex: 1 1 calc(50% - 20px);
+  min-width: 250px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.toggle-question:hover {
+  color: #f48fb1 !important;
+}
+
+.toggle-icon {
+  margin-right: 1px;
+  transition: transform 0.3s ease;
+  font-size: 1rem;
+  color: #f48fb1 !important;
+  margin-left: 8px;
+  margin-right: 4px;
+  font-size: 1rem;
+  color: #e91e63;
+  transition: transform 0.3s ease;
+}
+
+.button-link {
+  width: 40%;
+  display: inline-block;
+  padding: 10px 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #fd7dbd;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-left: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: "Klee One";
+}
+
+
+.button-link:hover {
+  background-color: #ff4e96;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.button-link:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+.img-button {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.extra-facts {
+  font-size: 1.3rem;
+  color: #3a3a3a;
+  font-weight: 800;
+  margin-bottom: 1px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Klee One";
+}
+
+.wiggle {
+  display: inline-block;
+  animation: wiggle 1.5s infinite;
+  font-size: 2rem;
+}
+
+.img-button img {
+  border:#ffcada solid 60px;
+  border-radius: 1px;
+ 
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+.rotate {
+  display: inline-block;
+  animation: rotate 5s linear infinite;
+  margin-right: 6px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-intro {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .toggle-item {
+    flex: 1 1 100%;
+  }
+
+  .button-link {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .extra-facts {
+font-size: 1.2rem;
+  }
+}

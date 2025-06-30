@@ -1,53 +1,26 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import "./App.css";
-import Hero from "./components/hero/Hero";
-import WorkSection from "./components/work-section/WorkSection";
-import SkillsSection from "./components/skills-section/SkillsSection";
-import ContactSection from "./components/contact/ContactSection";
-import Navbar from "./components/navbar/Navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import BlogLayout from "./pages/blog/BlogLayout.js";
+import BlogHome from "./pages/blog/BlogHome.js";
+import AboutMe from "./pages/blog/AboutMe.js";
+import Articles from "./pages/blog/Articles.js";
+import ArticleDetail from "./pages/blog/ArticleDetail.js";
+import MainSections from "./MainSections.js";
 
-const App = () => {
-  const [activeSection, setActiveSection] = useState("hero");
-
-  const scrollToSection = (section) => {
-    setActiveSection(section);
-  };
-
+function App() {
   return (
-    <div className="App">
-      {activeSection !== "hero" && <Navbar scrollToSection={scrollToSection} />}
-      {activeSection === "hero" && <Hero scrollToSection={scrollToSection} />}
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainSections />} />
 
-      {activeSection === "work" && (
-        <div key="work">
-          <WorkSection scrollToSection={scrollToSection} />
-        </div>
-      )}
-
-      {activeSection === "skills" && (
-        <motion.div
-          key="skills"
-         
-          transition={{ duration: 0.5 }}
-        >
-          <SkillsSection scrollToSection={scrollToSection} />
-        </motion.div>
-      )}
-
-      {activeSection === "contact" && (
-        <motion.div
-          key="contact"
-        /*   initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.5 }} */
-        >
-          <ContactSection scrollToSection={scrollToSection} />
-        </motion.div>
-      )}
-    </div>
+        <Route path="/blog" element={<BlogLayout />}>
+          <Route index element={<BlogHome />} />
+          <Route path="about" element={<AboutMe />} />
+          <Route path="articles" element={<Articles />} />
+          <Route path="articles/:id" element={<ArticleDetail />} />
+        </Route>
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;

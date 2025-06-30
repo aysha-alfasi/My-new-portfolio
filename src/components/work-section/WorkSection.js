@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./WorkSection.css";
-import ProjectModal from "../UI/ProjectModal";
+import ProjectModal from "../UI/ProjectModal.js";
 import journalApp from "../../imgs/g28.png";
 import purple from "../../imgs/path1.png";
 import purpleUI from "../../imgs/path2.png";

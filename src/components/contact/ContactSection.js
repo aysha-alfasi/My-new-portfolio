@@ -1,14 +1,101 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Swal from "sweetalert2";
 import gitHub from "../../imgs/icons/gitHub.png";
 import In from "../../imgs/icons/in.png";
+import sending from "../../imgs/sending2.gif";
 
 import "./ContactSection.css";
 
 const ContactSection = () => {
+  const [, setIsLoading] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    Swal.fire({
+      html: `
+    <img src="${sending}" class="sending" alt="Sending animation" />
+  <p class="sending-text">Sending your message...</p>
+  `,
+      showConfirmButton: false,
+      allowOutsideClick: false,
+      background: "#b18edf",
+      color: "#2a2a2c",
+      customClass: {
+        popup: "loading-popup",
+      },
+      didOpen: () => {
+        Swal.getPopup().style.overflow = "hidden";
+      },
+    });
+    try {
+      const res = await fetch("http://localhost:3002/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      await res.json();
+
+      if (res.ok) {
+        setIsLoading(false);
+        Swal.fire({
+          icon: false,
+          html: `
+          <div class="emoji-container">🎉</div>
+          <p>Your message is flying to my inbox🤩. I’ll reply soon 💌</p>
+        `,
+          showConfirmButton: true,
+          confirmButtonText: "Ok",
+          background: "#b18edf",
+          customClass: {
+            confirmButton: "conform-btn",
+            popup: "custom-popup",
+          },
+        });
+
+        setName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        setIsLoading(false);
+        Swal.fire({
+          icon: false,
+          html: `
+          <div class="emoji-container-sad">😢</div>
+          <p>Uh-oh! Message failed to send. Try again soon</p>
+        `,
+          showConfirmButton: true,
+          confirmButtonText: "Ok",
+          background: "#b18edf",
+          customClass: {
+            confirmButton: "conform-btn",
+            popup: "custom-popup",
+          },
+        });
+      }
+    } catch (error) {
+      setIsLoading(false);
+      Swal.fire({
+        icon: false,
+        html: `
+        <div class="emoji-container-sad">😢</div>
+        <p>Uh-oh! Message failed to send. Try again soon</p>
+      `,
+        showConfirmButton: true,
+        confirmButtonText: "Ok",
+        background: "#b18edf",
+        customClass: {
+          confirmButton: "conform-btn",
+          popup: "custom-popup",
+        },
+      });
+    }
+  };
 
   return (
     <section className="contact-section" id="contact">
@@ -23,7 +110,7 @@ const ContactSection = () => {
         Get In Touch
       </h2>
 
-      <form className="contact-form">
+      <form className="contact-form" onSubmit={handleSubmit}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -94,7 +181,6 @@ const ContactSection = () => {
             required
           />
         </motion.div>
-
         <motion.button
           type="submit"
           whileHover={{ scale: 1.05 }}

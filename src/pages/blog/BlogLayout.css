@@ -1,0 +1,126 @@
+body {
+  background-color: #FFF8FE;
+}
+
+.blog-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-content {
+  flex: 1;
+ /*  background-image: url("../assests/imgs/background6.png");
+  background-size: cover; */
+}
+
+.blog-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 30px;
+  margin: 15px;
+  padding-right: 20px;
+  font-family: "Klee One";
+  font-size: 1.2rem;
+
+}
+
+.blog-nav a {
+  text-decoration: none;
+  color: #272626;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.blog-nav .active-link {
+    color: #ffaae0 !important;
+    font-weight: bold;
+    border-bottom: 2px solid #ffaae0;
+  }
+
+  .blog-nav a:hover {
+    color: #ffaae0;
+    border-bottom: 2px solid #ffaae0;
+  }
+
+
+.portfolio-button {
+    background-color: #ffc8f4;
+    color: white;
+    padding: 6px 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .portfolio-button:hover {
+    background-color: #ffc5e9; 
+    transform: scale(1.1); 
+    box-shadow: 0 4px 10px rgba(255, 130, 209, 0.3);
+    cursor: pointer;
+    color: #f275bc !important;
+}
+
+.blog-footer {
+ display: flex;
+ flex-direction: column;
+align-items: center;
+background-color: #F3E8FF; 
+height: 100px;
+}
+
+.blog-name {
+  font-family: "Amatic SC", sans-serif;
+  font-size: 1.7rem;
+  color: rgba(36, 36, 36, 0.881);
+  margin-top: 55px;
+  margin-bottom: 5px;
+}
+
+.footer-last-line {
+  color: rgba(36, 36, 36, 0.784) !important;
+  font-size: 0.8rem;
+  font-family: "Klee One";
+
+}
+
+.footer-last-line span {
+  font-family: "Annie Use Your Telescope";
+  font-size: 0.9rem;
+}
+
+@media (max-width: 450px) {
+  .blog-nav {
+      gap: 17px;
+  }
+  .blog-nav a {
+      font-size: 1rem;
+  }
+}
+
+  @media (max-width: 400px) {
+    .blog-nav {
+        gap: 17px;
+    }
+    .blog-nav a {
+        font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .blog-nav {
+        gap: 13px;
+    }
+    .blog-nav a {
+        font-size: 0.9rem;
+    }
+
+    .portfolio-button {
+
+        padding: 3px 6px;
+        font-size: 0.8;
+    }
+  }
+  
