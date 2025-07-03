@@ -15,22 +15,33 @@ function BlogLayout() {
         >
           Home
         </NavLink>
-        <NavLink to="/blog/about" className={({ isActive }) => isActive ? "active-link" : ""}>
+        <NavLink
+          to="/blog/about"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
           About Me
         </NavLink>
-        <NavLink to="/blog/articles" className={({ isActive }) => isActive ? "active-link" : ""}>
+        <NavLink
+          to="/blog/articles"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
           Articles
         </NavLink>
       </nav>
-      <div className="blog-content">
+
+      <main className="blog-content">
         <Outlet />
-      </div>
+      </main>
+
       <footer className="blog-footer">
-          <p className="blog-name">The Cute coder ©</p>
-          <p className="footer-last-line">
-            <span>{"<"}/♡{">"}</span> Aisha
-          </p>
-          </footer>
+        <p className="blog-name">The Cute coder ©</p>
+        <p className="footer-last-line">
+          <span>
+            {"<"}/♡{">"}
+          </span>{" "}
+          Aisha
+        </p>
+      </footer>
     </div>
   );
 }

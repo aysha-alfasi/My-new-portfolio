@@ -1,0 +1,47 @@
+.highlights-section {
+  max-width: 600px;
+  text-align: center;
+  font-family: "Klee One", cursive;
+  margin: 10rem auto 4rem;
+  padding: 1rem 0;
+  min-height: 400px;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 2rem 1rem;
+}
+
+.highlight-card {
+  border-radius: 14px;
+  padding: 30px 20px;
+  cursor: pointer;
+  user-select: none;
+  transition: box-shadow 0.3s ease;
+  color: #6e3d62;
+  min-height: 260px;
+  height: auto;
+}
+
+.highlight-card h3 {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 1.3rem;
+  position: relative;
+  top: 10px;
+}
+
+.highlight-card p {
+  font-size: 1rem;
+  color: #a56599;
+  margin-top: 200px;
+}
+
+@media (max-width: 425px) {
+  .highlights-grid {
+    padding-bottom: 2rem;
+  }
+}
