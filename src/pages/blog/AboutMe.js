@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { TiArrowDownOutline } from "react-icons/ti";
+/* import Me from "../assests/imgs/m3.jpg"; */
 import "./AboutMe.css";
 
 function ToggleItem({ question, answer, isOpen, onClick }) {
@@ -32,11 +33,13 @@ function AboutMe() {
     },
     {
       question: "Some sweet facts",
-      answer: "my official name accurately means A female who lives a happy live.🌿",
+      answer:
+        "my official name accurately means A female who lives a happy live.🌿",
     },
     {
       question: "Some serious facts",
-      answer: "I work for what aligns with my principles and makes the world a better place. 👩🏻‍💻",
+      answer:
+        "I work for what aligns with my principles and makes the world a better place. 👩🏻‍💻",
     },
     {
       question: "Personality facts",
@@ -51,17 +54,20 @@ function AboutMe() {
 
   return (
     <div className="about-me">
-      <h1 className="about-title"><span className="heart">{"<♡>"}</span><br/> About Me</h1>
+     
       <div className="about-intro">
+        {/*
         <div className="img-button">
-{/*           <img src={Me} alt="Me" className="about-img" />
- */}          <button className="button-link"> My ebooks</button>
+           <img src={Me} alt="Me" className="about-img" />
+           <button className="button-link"> My ebooks</button>
         </div>
-
+*/}
         <div className="about-text-and-toggles">
-  
           <p className="about-text">
-          <span className="main-facts">Main facts</span> <br/> I like to code and design useful and nice ideas 🎀, And I’m a writer <span className="pink-s">♥</span>. My native language is Arabic العربية
+            <span className="main-facts">Main facts</span> <br /> I like to code
+            and design useful and nice ideas 🎀, And I’m a writer{" "}
+            <span className="pink-s">♥</span>. My native language is Arabic
+            العربية
           </p>
 
           <p className="extra-facts">

@@ -28,10 +28,19 @@ export default async function handler(req, res) {
     console.log("Response from Brevo:", response.data);
     res.status(200).json({ message: "Subscription successful" });
   } catch (error) {
-    console.error(
-      "Error subscribing:",
-      error.response ? error.response.data : error.message
-    );
+    const brevoMessage = error.response?.data?.message;
+    const status = error.response?.status;
+
+    console.error("Error subscribing:", brevoMessage || error.message);
+
+    if (
+      status === 400 &&
+      brevoMessage &&
+      brevoMessage.toLowerCase().includes("email is already associated")
+    ) {
+      return res.status(409).json({ message: "Email already subscribed" });
+    }
+
     res.status(500).json({ message: "Failed to subscribe" });
   }
 }

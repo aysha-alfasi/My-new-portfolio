@@ -99,8 +99,81 @@
   color: rgb(244, 127, 181) !important;
 }
 
-@media (max-width: 430px) {
-  .mailing-img {
-    width: 150px;
+.loading-flower {
+  font-size: 2.5rem;
+  display: inline-block;
+  animation: rotate 5s linear infinite;
+  position: relative;
+  opacity: 0.9;
+}
+
+.subscribe-popUp,
+.subscribe-popUp-warning-2 {
+  text-align: center;
+  background: #fff0f7;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(156, 39, 176, 0.15);
+  font-size: 1.2rem;
+  width: 500px;
+  font-family: "Inter";
+}
+
+.subscribe-popUp-warning-2 {
+  background-color: rgb(253, 253, 226) !important;
+  font-family: "Inter";
+}
+
+.subscribe-popUp-warning-2 .subscribed-btn {
+  background-color: #ffcddf;
+  margin-top: 0;
+}
+
+.subscribe-popUp-warning-2 .subscribed-btn:hover {
+  background-color: #fce0eb;
+}
+
+.subscribed-modal-content {
+  margin-top: 50px !important;
+}
+
+.subscribed-img {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 70px;
+  height: 50px;
+  transform-origin: center center;
+  animation: pulseScale2 ease-in-out 2.5s infinite;
+}
+
+.subscribed-text {
+  color: #585656;
+  margin-bottom: 0;
+}
+
+.subscribed-btn {
+  background: #f5a9d4;
+  border: none;
+  padding: 10px 50px;
+  font-family: "Pangolin", cursive;
+  border-radius: 8px;
+  color: #2a2a2c;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  font-size: 1.2rem;
+}
+
+.subscribed-btn:hover {
+  background-color: rgb(249, 208, 229);
+}
+
+@keyframes pulseScale2 {
+  0%,
+  100% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
   }
 }

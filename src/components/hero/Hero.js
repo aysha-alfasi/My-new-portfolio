@@ -1,12 +1,9 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import avatar from "../../imgs/smallAvatar.png";
 import "./Hero.css";
 
 const Hero = ({ scrollToSection }) => {
-
-  const navigate = useNavigate();
   
   return (
     <section className="hero">
@@ -94,7 +91,7 @@ const Hero = ({ scrollToSection }) => {
             className="btn"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            onClick={() => navigate("/blog")}
+            onClick={() => window.open("/blog", "_blank")}
           >
             My Blog
           </motion.button>

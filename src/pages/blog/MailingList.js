@@ -3,22 +3,32 @@ import { motion } from "framer-motion";
 import Swal from "sweetalert2";
 import "./MailingList.css";
 import cuteMail from "../../imgs/message2.png";
+import flower from "../../imgs/small-flower.png";
 
 const MailingList = () => {
   const [email, setEmail] = useState("");
+  const [, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!email || !email.includes("@")) {
-      Swal.fire({
-        icon: "warning",
-        title: "Oops!",
-        text: "Please enter your email address 🌸",
-        confirmButtonColor: "#f48fb1",
-      });
-      return;
-    }
+    Swal.fire({
+      html: `
+        <span class="loading-flower">🌸</span>
+        <p class="sending-text">Subscribing...</p>
+      `,
+      showConfirmButton: false,
+      allowOutsideClick: false,
+      background: "#fff0f7",
+      color: "#2a2a2c",
+      customClass: {
+        popup: "loading-popup",
+      },
+      didOpen: () => {
+        Swal.getPopup().style.overflow = "hidden";
+      },
+    });
+
     try {
       const response = await fetch("http://localhost:3001/api/subscribe", {
         method: "POST",
@@ -28,23 +38,73 @@ const MailingList = () => {
         body: JSON.stringify({ email }),
       });
 
+      await response.json();
+      setIsLoading(false);
+      Swal.close();
+
       if (response.ok) {
         Swal.fire({
-          icon: "success",
-          title: "Subscribed!",
-          text: "You're in! Expect lovely things 💌",
-          confirmButtonColor: "#f48fb1",
+          icon: false,
+          html: `
+            <div class="subscribed-modal-content">
+              <img src="${flower}" class="subscribed-img" />
+              <p class="subscribed-text">You're in! Expect lovely things 💌</p>
+            </div>
+          `,
+          background: "#fff0f7",
+          customClass: {
+            confirmButton: "subscribed-btn",
+            popup: "subscribe-popUp",
+          },
+        });
+      } else if (response.status === 409) {
+        Swal.fire({
+          html: `
+            <div class="subscribed-modal-content">
+              <span class="emoji-container-sad">🐰</span>
+              <p class="subscribed-text">This email is already in our list 😅</p>  
+            </div>
+          `,
+          customClass: {
+            confirmButton: "subscribed-btn",
+            popup: "subscribe-popUp-warning-2",
+          },
+        });
+      } else {
+        Swal.fire({
+          icon: false,
+          html: `
+            <div class="emoji-container-sad">🐰</div>
+            <p>Something went wrong 😕 Please try again soon</p>
+          `,
+          showConfirmButton: true,
+          confirmButtonText: "Ok",
+          customClass: {
+            confirmButton: "subscribed-btn",
+            popup: "subscribe-popUp-warning-2",
+          },
         });
       }
     } catch (error) {
+      setIsLoading(false);
+      Swal.close();
       console.error("Error:", error);
+
       Swal.fire({
-        icon: "error",
-        title: "Oops!",
-        text: "There was an error. Please try again later.",
-        confirmButtonColor: "#f48fb1",
+        icon: false,
+        html: `
+          <div class="emoji-container-sad">🐰</div>
+          <p>Something went wrong 😕 Please try again soon</p>
+        `,
+        showConfirmButton: true,
+        confirmButtonText: "Ok",
+        customClass: {
+          confirmButton: "subscribed-btn",
+          popup: "subscribe-popUp-warning-2",
+        },
       });
     }
+
     setEmail("");
   };
 
