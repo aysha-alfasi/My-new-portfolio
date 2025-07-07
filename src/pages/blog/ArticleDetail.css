@@ -28,11 +28,10 @@
   height: auto;
   border-radius: 10px;
   margin-bottom: 30px;
-  display: block; 
-  margin-left: auto; 
+  display: block;
+  margin-left: auto;
   margin-right: auto;
 }
-
 
 .content-detail {
   font-size: 1.1rem;
@@ -44,8 +43,20 @@
 
 .content-detail p {
   margin-bottom: 20px;
+  font-size: 1.3rem;
 }
 
+.extra-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.extra-image-wrapper img {
+  padding: 20px 20px;
+  border-radius: 30px;
+  width: 400px;
+}
 @media (max-width: 768px) {
   .article-details {
     padding: 20px 10px;

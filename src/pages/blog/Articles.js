@@ -14,9 +14,9 @@ const Articles = () => {
 
   return (
     <div className="articles-page">
-      <h1 className="articles-title">
-      <span className="heart">{"<♡>"}</span><br/>The cute coder diary
-      </h1>
+      {/* <h1 className="articles-title">
+      <span className="heart">{"<♡>"}</span>
+      </h1> */}
 
       <div className="articles-list">
         {articles.map((article) => (

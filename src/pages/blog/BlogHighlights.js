@@ -2,7 +2,7 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import "./BlogHighlights.css";
-import books from "../../imgs/books.jpg";
+import books from "../../imgs/books2.png";
 import cuteCoder from "../../imgs/cuteCoder.png";
 import pinkLavander from "../../imgs/pinkLavander2.png";
 import selfCare from "../../imgs/selfCare.png";
