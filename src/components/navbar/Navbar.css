@@ -1,7 +1,7 @@
 .navbar {
   position: fixed;
-  background: linear-gradient(135deg, #2c2c54, #6a5acd);
-  background-attachment: fixed;
+/*   background: linear-gradient(135deg, #2c2c54, #6a5acd);
+ */  background-attachment: fixed;
   background-size: contain;
   top: 0;
   width: 100%;

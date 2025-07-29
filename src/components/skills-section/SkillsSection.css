@@ -1,6 +1,6 @@
 .skills-section {
-  background: linear-gradient(135deg, #2c2c54, #6a5acd);
-  background-attachment: fixed;
+/*   background: linear-gradient(135deg, #2c2c54, #6a5acd);
+ */  background-attachment: fixed;
   background-size: cover;
   min-height: 100vh;
   color: white;
