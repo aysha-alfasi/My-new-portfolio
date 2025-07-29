@@ -4,9 +4,6 @@ html, body {
   height: 100%;
   overflow: hidden;
   font-family: "Klee One", sans-serif;
-}
-
-.App {
   scroll-snap-type: y mandatory;
   height: 100vh;
   overflow-y: auto;
@@ -14,6 +11,8 @@ html, body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+
 
 .App::-webkit-scrollbar {
   display: none;
