@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./App.css";
 import Hero from "./components/hero/Hero.js";
@@ -7,8 +7,17 @@ import SkillsSection from "./components/skills-section/SkillsSection.js";
 import ContactSection from "./components/contact/ContactSection.js";
 import Navbar from "./components/navbar/Navbar.js";
 
-const App = () => {
+const MainSections = () => {
   const [activeSection, setActiveSection] = useState("hero");
+
+  useEffect(() => {
+    document.body.classList.add("portfolio-bg");
+    document.body.classList.remove("blog-bg");
+
+    return () => {
+      document.body.classList.remove("portfolio-bg");
+    };
+  }, []);
 
   const scrollToSection = (section) => {
     setActiveSection(section);
@@ -46,4 +55,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default MainSections;

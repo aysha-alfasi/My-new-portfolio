@@ -1,7 +1,18 @@
+import { useEffect } from "react";
 import { Outlet, Link, NavLink } from "react-router-dom";
 import "./BlogLayout.css";
 
 function BlogLayout() {
+
+  useEffect(() => {
+    document.body.classList.add("blog-bg");
+    document.body.classList.remove("portfolio-bg");
+
+    return () => {
+      document.body.classList.remove("blog-bg");
+    };
+  }, []);
+
   return (
     <div className="blog-layout">
       <nav className="blog-nav">

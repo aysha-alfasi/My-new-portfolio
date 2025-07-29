@@ -7,6 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.portfolio-bg {
+  background: linear-gradient(135deg, #2c2c54, #6a5acd);
+
+}
+
+body.blog-bg {
+  background-color: #fff8fe;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
