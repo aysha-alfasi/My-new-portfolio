@@ -100,7 +100,7 @@ const ContactSection = () => {
   return (
     <section className="contact-section" id="contact">
       <div className="stars-bg" />
-      <h2
+      <motion.h2
         className="contact-title"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -108,7 +108,7 @@ const ContactSection = () => {
         viewport={{ once: true }}
       >
         Get In Touch
-      </h2>
+      </motion.h2>
 
       <form className="contact-form" onSubmit={handleSubmit}>
         <motion.div

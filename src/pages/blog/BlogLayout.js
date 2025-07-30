@@ -14,7 +14,7 @@ function BlogLayout() {
   }, []);
 
   return (
-    <div className="blog-layout">
+    <div className="blog-layout pink-scrollbar" style={{ overflowY: 'scroll', height: '100vh' }}>
       <nav className="blog-nav">
         <Link to="/" className="portfolio-button">
           My portfolio

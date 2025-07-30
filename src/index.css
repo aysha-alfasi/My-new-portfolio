@@ -1,11 +1,19 @@
+html,
 body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
   font-family: "Klee One", sans-serif;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
-  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: hidden !important;
 }
 
 body.portfolio-bg {
@@ -13,10 +21,9 @@ body.portfolio-bg {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 
 body.blog-bg {
   background-color: #fff8fe;

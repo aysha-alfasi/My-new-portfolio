@@ -1,16 +1,12 @@
 .navbar {
-  position: fixed;
-  background: linear-gradient(135deg, #2c2c54, #6a5acd);
-  background-attachment: fixed;
-  background-size: contain;
-  top: 0;
-  width: 100%;
+  width: 100% !important;
+  margin: 0 auto; 
   display: flex;
   justify-content: center;
   gap: 80px;
   z-index: 1000;
-  margin-top: 0;
-  padding-top: 20px !important;
+  padding-top: 15px !important;
+  min-height: 40px;
 }
 
 .navbar button {
@@ -20,6 +16,7 @@
   color: #e3cdffd4;
   transition: color 0.3s;
   font-size: 1.1rem;
+
 }
 
 .navbar button:hover {
@@ -34,6 +31,7 @@
 
   .navbar button {
     font-size: 0.95rem;
+
   }
 }
 
@@ -46,3 +44,4 @@
     font-size: 0.85rem;
   }
 }
+

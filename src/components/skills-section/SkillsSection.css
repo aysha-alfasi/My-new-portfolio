@@ -1,8 +1,5 @@
 .skills-section {
-/*   background: linear-gradient(135deg, #2c2c54, #6a5acd);
- */  background-attachment: fixed;
-  background-size: cover;
-  min-height: 100vh;
+  height: 100%;
   color: white;
   padding: 30px 20px !important;
   animation: gradientRotate 20s ease infinite;
@@ -19,7 +16,7 @@
   font-weight: 700;
   font-family: "Pangolin", serif;
   text-align: center;
-  margin: 150px auto 20px;
+  margin: 100px auto 20px;
   background: linear-gradient(135deg, #fddcf0, #c5aaf5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -1,8 +1,8 @@
-
 .blog-layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-y: auto
 }
 
 .blog-content {
@@ -65,14 +65,17 @@
   background-color: #f3e8ff;
   margin-top: auto !important;
   min-height: 70px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
 }
 
 .blog-name {
   font-family: "Amatic SC", sans-serif;
   font-size: 1.7rem;
   color: rgba(36, 36, 36, 0.881);
-  margin-top: 15px;
-  margin-bottom: 2px;
+  margin-top: 20px;
+  margin-bottom: -7px;
 }
 
 .footer-last-line {
@@ -130,4 +133,18 @@
     padding: 3px 6px;
     font-size: 0.8;
   }
+}
+
+
+.pink-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+.pink-scrollbar::-webkit-scrollbar-track {
+  background: #ffe6f0;
+  border-radius: 10px;
+}
+.pink-scrollbar::-webkit-scrollbar-thumb {
+  background: #ff99cc;
+  border-radius: 10px;
+  border: 2px solid #ffe6f0;
 }

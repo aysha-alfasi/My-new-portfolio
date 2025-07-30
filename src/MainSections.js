@@ -10,6 +10,7 @@ import Navbar from "./components/navbar/Navbar.js";
 const MainSections = () => {
   const [activeSection, setActiveSection] = useState("hero");
 
+
   useEffect(() => {
     document.body.classList.add("portfolio-bg");
     document.body.classList.remove("blog-bg");
@@ -24,7 +25,17 @@ const MainSections = () => {
   };
 
   return (
-    <div className="App">
+    
+    <div
+    className={`App purple-scrollbar ${
+      activeSection === "hero" || activeSection === "contact" ? "hide-scrollbar" : ""
+    }`}
+    style={{
+      overflowY: activeSection === "hero" || activeSection === "contact" ? "hidden" : "scroll",
+      height: "100vh",
+      overflowX: "hidden",
+    }}
+  >
       {activeSection !== "hero" && <Navbar scrollToSection={scrollToSection} />}
       {activeSection === "hero" && <Hero scrollToSection={scrollToSection} />}
 

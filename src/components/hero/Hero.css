@@ -8,6 +8,7 @@
   flex-direction: column;
   color: white;
   background: linear-gradient(135deg, #2c2c54, #6a5acd);
+  overflow: hidden;
 }
 
 .content {
@@ -151,3 +152,5 @@ h1 {
     background-position: 40px 40px;
   }
 }
+
+

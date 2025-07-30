@@ -47,7 +47,7 @@ const SkillsSection = () => {
       <h2 className="skills-title">My Skills</h2>
       <div className="skills-grid">
         {skills.map((skill, index) => (
-          <div className="skill-card" key={skill.name}>
+          <div className="skill-card" key={`${skill.name}-${index}`}>
             <motion.img
               src={skill.icon}
               alt={skill.name}
@@ -117,7 +117,7 @@ const SkillsSection = () => {
                   .filter((skill) => skill.name)
                   .map((skill, index) => (
                     <motion.li
-                      key={index}
+                    key={`${skill.name}-${index}`}
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.3 }}
