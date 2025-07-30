@@ -33,3 +33,12 @@ button {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
+.purple-scrollbar-modal::-webkit-scrollbar-track {
+  background:  #f9bfe2 !important;
+  border-radius: 5px !important;
+}
+
+.purple-scrollbar-modal::-webkit-scrollbar-thumb {
+border-radius: 10px !important;
+}

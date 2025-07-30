@@ -7,11 +7,14 @@ import ArticleDetail from "./pages/blog/ArticleDetail.js";
 import MainSections from "./MainSections.js";
 
 function App() {
-  
   return (
     <Router>
       <Routes>
         <Route path="/" element={<MainSections />} />
+   
+        <Route path="/work" element={<MainSections />} />
+        <Route path="/skills" element={<MainSections />} />
+        <Route path="/contact" element={<MainSections />} />
 
         <Route path="/blog" element={<BlogLayout />}>
           <Route index element={<BlogHome />} />

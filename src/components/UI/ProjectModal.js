@@ -14,7 +14,7 @@ const ProjectModal = ({ project, onClose }) => {
 
   return (
     <div className="modal-overlay" onClick={handleOverlayClick}>
-      <div className="modal-content">
+      <div className="modal-content purple-scrollbar purple-scrollbar-modal">
         <button className="close-button" onClick={onClose}>
           ×
         </button>
