@@ -1,7 +1,14 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = ({ scrollToSection }) => {
+const Navbar = () => {
+  const navigate = useNavigate();
+
+  const goTo = (section) => {
+    navigate(section === "hero" ? "/" : `/${section}`);
+  };
+
   return (
     <motion.nav
       className="navbar"
@@ -9,12 +16,13 @@ const Navbar = ({ scrollToSection }) => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <button onClick={() => scrollToSection("work")}>Work</button>
-      <button onClick={() => scrollToSection("skills")}>Skills</button>
-      <button onClick={() => scrollToSection("contact")}>Contact</button>
-      <button onClick={() => scrollToSection("hero")}>Home</button>
+      <button onClick={() => goTo("work")}>Work</button>
+      <button onClick={() => goTo("skills")}>Skills</button>
+      <button onClick={() => goTo("contact")}>Contact</button>
+      <button onClick={() => goTo("hero")}>Home</button>
     </motion.nav>
   );
 };
 
 export default Navbar;
+

@@ -41,8 +41,8 @@ const MainSections = () => {
       }}
     >
      
-      {section !== "hero" && <Navbar scrollToSection={scrollToSection} />}
-      {section === "hero" && <Hero scrollToSection={scrollToSection} />}
+     {section !== "hero" && <Navbar />}
+     {section === "hero" && <Hero scrollToSection={scrollToSection} />}
       {section === "work" && <WorkSection scrollToSection={scrollToSection} />}
       {section === "skills" && (
         <motion.div key="skills" transition={{ duration: 0.5 }}>
