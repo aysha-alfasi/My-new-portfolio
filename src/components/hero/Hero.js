@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import avatar from "../../imgs/smallAvatar.png";
+import avatar from "../../imgs/avatar3.png";
 import "./Hero.css";
 
 const Hero = ({ scrollToSection }) => {
