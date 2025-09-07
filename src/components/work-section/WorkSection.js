@@ -7,8 +7,10 @@ import purple from "../../imgs/path1.png";
 import purpleUI from "../../imgs/path2.png";
 import missTasks from "../../imgs/g2.png";
 import Beary from "../../imgs/image1.png";
-import todo from "../../imgs/g1311.png";
+import todo from "../../imgs/newTodo.png";
 import bookingApp from "../../imgs/g36.png";
+import backToSelf from '../../imgs/backToSelf.png';
+import assistNasma from '../../imgs/assistNasma.png';
 import react from "../../imgs/icons/reactNoBorder.png";
 import redux from "../../imgs/icons/reduxiconNoBorder.png";
 import framerMotion from "../../imgs/icons/motion-new.png";
@@ -25,19 +27,18 @@ const projects = [
   {
     id: 1,
     title: "Booking App UX",
-    description: "infos later",
-    longDescription: "",
+    description: "UX Exploration",
+    longDescription: "An unfinished UX case study that shows how I organize the UX process ✏️. I focused on structuring the workflow, preparing a research plan, and survey questions, while later steps (personas, journey mapping, wireframing) are shown only as part of the workflow framework 💡.",
     techIcons: [miro],
-    link: "#",
-    githubLink: "https://github.com/your-repo",
+    link: "https://miro.com/app/board/uXjVI1wpvYg=/?share_link_id=630628476443",
     imageUrl: bookingApp,
     category: "uiux",
   },
   {
     id: 2,
     title: "The Purple Card UI",
-    description: "with Figma",
-    longDescription: "",
+    description: "UI Snapshot",
+    longDescription: "The homepage UI for The Purple Card App 💜. I first designed it in Figma, then turned it into a working app 🎨✨, showing it just as envisioned 💻🌟.",
     techIcons: [figma],
     link: "https://www.figma.com/proto/3A5RCZ4FeBeNpLI2CbJOv1/The-Purple-Card-%F0%9F%9B%B8?node-id=4-69&t=SC3eNmcSWr3vM56L-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
     imageUrl: purpleUI,
@@ -46,8 +47,8 @@ const projects = [
   {
     id: 3,
     title: "Miss Tasks UI",
-    description: "infos later",
-    longDescription: "",
+    description: "UI Preview",
+    longDescription: "A soft and friendly UI for Miss Tasks 🌸💬. The Figma design shows the app’s gentle, supportive style and how users interact with mood-based chat and productivity features 💡✨. Note: The final design differ slightly from the live app 💻📝.",
     techIcons: [figma, inkscape],
     link: "https://www.figma.com/proto/BNQigaKaZWRfORE3MyEtnk/Miss-Tasks?node-id=4-50&p=f&t=CguGXD7XApzPuM1w-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A50",
     imageUrl: missTasks,
@@ -60,7 +61,7 @@ const projects = [
     longDescription:
       "A cute and simple Todo app built with React 🌼. Users can add, complete, delete, and filter tasks ✨. It uses Redux Toolkit for state and Framer Motion for smooth animations. The GitHub button links to the project’s README 💻⭐.",
     techIcons: [react, redux, framerMotion],
-    link: "#",
+    link: "https://my-todo-app-one-kappa.vercel.app/",
     githubLink: "https://github.com/aysha-alfasi/my-todo-app",
     imageUrl: todo,
     category: "web",
@@ -68,7 +69,7 @@ const projects = [
   {
     id: 5,
     title: "Journaling App",
-    description: "infos later",
+    description: "full-stack Journal App",
     longDescription:
       "A cozy personal journal app built with React, Ant Design, and PostgreSQL. Users can write, edit, and explore their entries with moods 🌿💭. It includes mood stats 📊, secure login, and smooth UX powered by custom hooks and Redux Toolkit.",
     techIcons: [react, redux, node, express, postgre],
@@ -103,9 +104,9 @@ const projects = [
   },
   {
     id: 8,
-    title: "daily performance",
-    description: "infos later",
-    longDescription: "",
+    title: "Teddy Tracker",
+    description: "Daily Self-Check",
+    longDescription: "A cozy daily reflection design 🐻🛏️. The sleepy teddy rests under a blanket that looks like a soft panel. Each panel highlights a personal value, like patience, kindness, optimism, or wisdom, with a gentle question related to each value underneath 🌙✨. A playful and comforting way to reflect on your day, track your habits, and continuously improve yourself before bedtime 💛💭.",
     techIcons: [inkscape],
     link: "https://my-portfolio-one-neon-21.vercel.app/graphics/Beary.jpg",
     imageUrl: Beary,
@@ -113,14 +114,57 @@ const projects = [
   },
   {
     id: 9,
-    title: "Productivity Collection",
-    description: "infos later",
-    longDescription: "",
+    title: "Miss Tasks’ Plan",
+    description: "3-Sheet Strategy",
+    longDescription: "A smart and playful way to track your progress all year with just three sheets 📒💡. Miss Tasks guides you through daily tasks, monthly reflections, and yearly reviews, providing a simple yet effective strategy to stay on top of your goals 🌸📝. A fun companion for organizing your achievements and celebrating progress 💛🎉.",
     techIcons: [inkscape],
-    link: "https://my-portfolio-one-neon-21.vercel.app/graphics/collection.pdf",
+    link: "/graphics/missTasksGraphicProject.pdf",
     imageUrl: missTasks,
     category: "graphic",
   },
+  {
+    id: 10,
+    title: "Nasma Assist",
+    description: " cute mood App (WIP)",
+    longDescription: "A friendly React app featuring Nasma, a cute assistant who helps track moods and build habits 💖. Users can pick moods, hear playful sounds, and see Nasma’s reactions ✨. Built with React and Framer Motion, this project is still in progress with planned features like habit tracking, goals, and a calendar 🌱📆.",
+    techIcons: [react, framerMotion],
+    link: "https://nasma-assist.vercel.app/",
+    githubLink: "https://github.com/aysha-alfasi/Nasma-Assist",
+    imageUrl: assistNasma,
+    category: "web",
+  },
+    {
+    id: 11,
+    title: "Back to Self",
+    description: "Cozy digital journal",
+    longDescription: "A cozy digital journal built with React 📖✨. Users can write, view, edit, and delete their reflections 💌. It features daily messages, smooth page-turn animations, and calming paper-flip sounds 🍃. Local storage keeps everything safe in the browser 💾.",
+    techIcons: [react, framerMotion],
+    link: "https://back-to-self-app.vercel.app/",
+    githubLink: "https://github.com/aysha-alfasi/back-to-self-App",
+    imageUrl: backToSelf,
+    category: "web",
+  },
+   {
+    id: 12,
+    title: "Nasma Assist",
+    description: "Co-Designed with AI",
+    longDescription: "Nasma Assist is a cute character designing project 🌟 where I started by generating a base image with AI 💭✨. Then, I refined the design in Inkscape, adding clothes, details, and multiple facial expressions😄🎨. Fully personalized, ready to bring life and mood to any app! 🌈",
+    techIcons: [inkscape],
+    link: "/graphics/NasmaAssist.pdf",
+    imageUrl: assistNasma,
+    category: "graphic",
+  },
+  {
+    id: 13,
+    title: "Nasma Assist UI",
+    description: "Interactive UI (WIP)",
+    longDescription: "A friendly UI for Nasma Assist, the cute mood-tracking app in progress 💖. The Figma design shows several app pages (some not yet developed in the live app), giving a peek at planned features like a calendar and habit tracking ✨🌱. A fun and interactive glimpse at the interface, still a work in progress 💻📆.",
+    techIcons: [figma, inkscape],
+    link: "https://www.figma.com/design/hkWt1ZIMZmkFJYX1GpFU5C/Mood-Habit-Tracker-App?node-id=0-1&t=SlcD5zXEQhc5NcYC-1",
+    imageUrl: assistNasma,
+    category: "uiux",
+  },
+
 ];
 
 const WorkSection = () => {

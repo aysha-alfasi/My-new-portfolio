@@ -45,7 +45,7 @@ const BlogHome = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="blog-title"> The Cute Coder</h1>
+          <h1 className="blog-title"> The <span>P</span>ink Coder</h1>
 
           <div className="extra-info">
             <p>

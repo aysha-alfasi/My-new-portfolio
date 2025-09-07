@@ -45,7 +45,7 @@ function BlogLayout() {
       </main>
 
       <footer className="blog-footer">
-        <p className="blog-name">The Cute coder ©</p>
+        <p className="blog-name">The pink coder ©</p>
         <p className="footer-last-line">
           <span>
             {"<"}/♡{">"}

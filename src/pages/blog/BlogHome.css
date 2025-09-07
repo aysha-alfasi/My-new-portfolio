@@ -46,12 +46,10 @@
 }
 
 .blog-title span {
-  font-family: "Caveat", cursive;
+  font-family: "Klee One", cursive;
   font-weight: 300;
 }
 
-.blog-title:hover {
-}
 
 .explore-button,
 .mailing-list-btn {
