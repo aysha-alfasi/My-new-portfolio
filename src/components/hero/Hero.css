@@ -43,7 +43,7 @@ h1 {
 }
 
 .heart {
-  animation: shine 1.7s ease-in-out infinite;
+  animation: shine 1.7s ease-in-out infinite !important;
 }
 
 @keyframes shine {

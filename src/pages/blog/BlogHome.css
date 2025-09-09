@@ -39,7 +39,6 @@
 .blog-title {
   font-size: 4.5rem;
   background-color: #ffa1b8;
-  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Amatic SC", cursive;

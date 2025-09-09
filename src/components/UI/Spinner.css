@@ -19,7 +19,7 @@
   align-items: center;
 }
 
-.heart {
+.spinner-heart {
   font-size: 20px;
   color: #fb95c8;
   animation: heartbeat 1s infinite;
