@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./WorkSection.css";
 import ProjectModal from "../UI/ProjectModal.js";
+import Spinner from "../UI/Spinner.js";
 import journalApp from "../../imgs/g28.png";
 import purple from "../../imgs/path1.png";
 import purpleUI from "../../imgs/path2.png";
@@ -77,53 +78,8 @@ const projects = [
     imageUrl: journalApp,
     category: "web",
   },
-  {
+    {
     id: 6,
-    title: "Miss Tasks App!",
-    description: "Simple full-stack app",
-    longDescription:
-      "Miss Tasks is a gentle productivity app that chats with you about your day 🌸💬. It responds to your mood using sentiment analysis and offers kind, supportive replies. Built with React, Bootstrap, and a Node.js backend with custom emotional logic 💡📝.",
-    techIcons: [react, node, express],
-    link: "https://miss-tasks-app.onrender.com/",
-    githubLink: "https://github.com/aysha-alfasi/Miss-tasks-app-",
-    imageUrl: missTasks,
-    category: "web",
-  },
-  {
-    id: 7,
-    title: "The Purple Card",
-    description: "Fun DApp",
-    longDescription:
-      "A playful idea-tracking app where users can manage idea cards 💭✨. Built with React and sound/alert effects for a fun UX. The backend runs on Motoko via DFINITY’s Internet Computer 💻🎉 — and there’s room for future magic! 🌈",
-    techIcons: [react, definity, motoko],
-    link: "https://early-rocket-whispering.on-fleek.app/",
-    githubLink:
-      "https://github.com/aysha-alfasi/The-purple-card-full-DApp-project",
-    imageUrl: purple,
-    category: "web",
-  },
-  {
-    id: 8,
-    title: "Teddy Tracker",
-    description: "Daily Self-Check",
-    longDescription: "A cozy daily reflection design 🐻🛏️. The sleepy teddy rests under a blanket that looks like a soft panel. Each panel highlights a personal value, like patience, kindness, optimism, or wisdom, with a gentle question related to each value underneath 🌙✨. A playful and comforting way to reflect on your day, track your habits, and continuously improve yourself before bedtime 💛💭.",
-    techIcons: [inkscape],
-    link: "https://my-portfolio-one-neon-21.vercel.app/graphics/Beary.jpg",
-    imageUrl: Beary,
-    category: "graphic",
-  },
-  {
-    id: 9,
-    title: "Miss Tasks’ Plan",
-    description: "3-Sheet Strategy",
-    longDescription: "A smart and playful way to track your progress all year with just three sheets 📒💡. Miss Tasks guides you through daily tasks, monthly reflections, and yearly reviews, providing a simple yet effective strategy to stay on top of your goals 🌸📝. A fun companion for organizing your achievements and celebrating progress 💛🎉.",
-    techIcons: [inkscape],
-    link: "/graphics/missTasksGraphicProject.pdf",
-    imageUrl: missTasks,
-    category: "graphic",
-  },
-  {
-    id: 10,
     title: "Nasma Assist",
     description: " cute mood App (WIP)",
     longDescription: "A friendly React app featuring Nasma, a cute assistant who helps track moods and build habits 💖. Users can pick moods, hear playful sounds, and see Nasma’s reactions ✨. Built with React and Framer Motion, this project is still in progress with planned features like habit tracking, goals, and a calendar 🌱📆.",
@@ -133,6 +89,52 @@ const projects = [
     imageUrl: assistNasma,
     category: "web",
   },
+   {
+    id: 7,
+    title: "The Purple Card",
+    description: "Fun DApp",
+    longDescription:
+      "A playful idea-tracking app where users can manage idea cards 💭✨. Built with React and sound/alert effects for a fun UX. The backend runs on Motoko via DFINITY’s Internet Computer 💻🎉 — and there’s room for future magic! 🌈",
+    techIcons: [react, definity, motoko],
+    link: "https://the-purple-card-frontend.vercel.app/",
+    githubLink:
+      "https://github.com/aysha-alfasi/The-purple-card-full-DApp-project",
+    imageUrl: purple,
+    category: "web",
+  },
+  {
+    id: 8,
+    title: "Miss Tasks App!",
+    description: "Simple full-stack app",
+    longDescription:
+      "Miss Tasks is a gentle productivity app that chats with you about your day 🌸💬. It responds to your mood using sentiment analysis and offers kind, supportive replies. Built with React, Bootstrap, and a Node.js backend with custom emotional logic 💡📝.",
+    techIcons: [react, node, express],
+    /* link: "https://miss-tasks-app.onrender.com/", */
+    githubLink: "https://github.com/aysha-alfasi/Miss-tasks-app-",
+    imageUrl: missTasks,
+    category: "web",
+  },
+  {
+    id: 9,
+    title: "Teddy Tracker",
+    description: "Daily Self-Check",
+    longDescription: "A cozy daily reflection design 🐻🛏️. The sleepy teddy rests under a blanket that looks like a soft panel. Each panel highlights a personal value, like patience, kindness, optimism, or wisdom, with a gentle question related to each value underneath 🌙✨. A playful and comforting way to reflect on your day, track your habits, and continuously improve yourself before bedtime 💛💭.",
+    techIcons: [inkscape],
+    link: "https://my-portfolio-one-neon-21.vercel.app/graphics/Beary.jpg",
+    imageUrl: Beary,
+    category: "graphic",
+  },
+  {
+    id: 10,
+    title: "Miss Tasks’ Plan",
+    description: "3-Sheet Strategy",
+    longDescription: "A smart and playful way to track your progress all year with just three sheets 📒💡. Miss Tasks guides you through daily tasks, monthly reflections, and yearly reviews, providing a simple yet effective strategy to stay on top of your goals 🌸📝. A fun companion for organizing your achievements and celebrating progress 💛🎉.",
+    techIcons: [inkscape],
+    link: "/graphics/missTasksGraphicProject.pdf",
+    imageUrl: missTasks,
+    category: "graphic",
+  },
+
     {
     id: 11,
     title: "Back to Self",
@@ -144,6 +146,7 @@ const projects = [
     imageUrl: backToSelf,
     category: "web",
   },
+  
    {
     id: 12,
     title: "Nasma Assist",
@@ -170,11 +173,33 @@ const projects = [
 const WorkSection = () => {
   const [filter, setFilter] = useState("web");
   const [selectedProject, setSelectedProject] = useState(null);
-  const openModal = (project) => setSelectedProject(project);
+  const [isLoaded, setIsLoaded] = useState(false);
+  
 
-  const filteredProjects = projects.filter(
+    const filteredProjects = projects.filter(
     (project) => project.category === filter
   );
+
+  useEffect(() => {
+    // Load all images used in projects <♡ />
+    setIsLoaded(false);
+    const imageUrls = filteredProjects.map(p => p.imageUrl);
+    let loadedCount = 0;
+    imageUrls.forEach((url) => {
+      const img = new window.Image();
+      img.src = url;
+      img.onload = img.onerror = () => {
+        loadedCount++;
+        if (loadedCount === imageUrls.length) {
+          setIsLoaded(true);
+        }
+      };
+    });
+    if (imageUrls.length === 0) setIsLoaded(true);
+  }, [filter, filteredProjects]);
+
+  const openModal = (project) => setSelectedProject(project);
+
 
   return (
     <section className="section-work">
@@ -200,6 +225,9 @@ const WorkSection = () => {
           Graphic
         </button>
       </div>
+  {!isLoaded ? ( 
+    <Spinner />
+  ): (
 
       <div className="projects-grid">
         <AnimatePresence mode="wait">
@@ -227,6 +255,7 @@ const WorkSection = () => {
           ))}
         </AnimatePresence>
       </div>
+       )}
       <ProjectModal
         project={selectedProject}
         onClose={() => setSelectedProject(null)}
