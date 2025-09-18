@@ -1,6 +1,6 @@
 import React from "react";
 import "./ProjectModal.css";
-import definity from "../../imgs/icons/definity.png";
+import definity from "../../imgs/icons/definity1.png";
 import gitHub from "../../imgs/icons/gitHub.png";
 
 const ProjectModal = ({ project, onClose }) => {

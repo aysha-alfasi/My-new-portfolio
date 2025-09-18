@@ -12,17 +12,17 @@ import todo from "../../imgs/newTodo.png";
 import bookingApp from "../../imgs/g36.png";
 import backToSelf from '../../imgs/backToSelf.png';
 import assistNasma from '../../imgs/assistNasma.png';
-import react from "../../imgs/icons/reactNoBorder.png";
-import redux from "../../imgs/icons/reduxiconNoBorder.png";
-import framerMotion from "../../imgs/icons/motion-new.png";
-import miro from "../../imgs/icons/miroNoBorder.png";
-import figma from "../../imgs/icons/figmaNoBorder.png";
-import inkscape from "../../imgs/icons/inkscapeNoBorder.png";
-import motoko from "../../imgs/icons/moLogo.png";
-import postgre from "../../imgs/icons/postgreLogo.png";
-import definity from "../../imgs/icons/definity.png";
-import node from "../../imgs/icons/nodeLogoLarge.png";
-import express from "../../imgs/icons/expressLogo.png";
+import react from "../../imgs/icons/reactNoBorder1.png";
+import redux from "../../imgs/icons/reduxiconNoBorder1.png";
+import framerMotion from "../../imgs/icons/motion-new1.png";
+import miro from "../../imgs/icons/miroNoBorder1.png";
+import figma from "../../imgs/icons/figmaNoBorder1.png";
+import inkscape from "../../imgs/icons/inkscapeNoBorder1.png";
+import motoko from "../../imgs/icons/moLogo1.png";
+import postgre from "../../imgs/icons/postgreLogo1.png";
+import definity from "../../imgs/icons/definity1.png";
+import node from "../../imgs/icons/nodeLogoLarge1.png";
+import express from "../../imgs/icons/expressLogo1.png";
 
 const projects = [
   {

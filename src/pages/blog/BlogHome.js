@@ -45,14 +45,13 @@ const BlogHome = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="blog-title"> The <span>P</span>ink Coder</h1>
+          <h1 className="blog-title">Aishense</h1>
 
           <div className="extra-info">
-            <p>
-              I love coding {"<"}
+             <p>
+              A space for Aisha’s Sense & Essence {"<"}
               <span className="pink-s">♡</span>
-              {">"} designing <span className="pink-s">ღ</span> and writing{" "}
-              <span className="pink-s">♫</span>
+              {">"}
             </p>
           </div>
 
