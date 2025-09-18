@@ -64,7 +64,7 @@ function AboutMe() {
 */}
         <div className="about-text-and-toggles">
           <p className="about-text">
-            <span className="main-facts">Main facts</span> <br /> I like to code
+            I like to code
             and design useful and nice ideas 🎀, And I’m a writer{" "}
             <span className="pink-s">♥</span>. My native language is Arabic
             العربية
