@@ -199,7 +199,7 @@ const ContactSection = () => {
         viewport={{ once: true }}
       >
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/aysha-alfasi"
           target="_blank"
           rel="noreferrer"
         >
@@ -207,7 +207,7 @@ const ContactSection = () => {
           GitHub
         </a>
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="https://www.linkedin.com/in/aishense/"
           target="_blank"
           rel="noreferrer"
         >
