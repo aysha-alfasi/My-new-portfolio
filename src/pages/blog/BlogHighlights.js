@@ -1,41 +1,61 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import "./BlogHighlights.css";
-import books from "../../imgs/books2.png";
+import books from "../../imgs/books3.png";
 import cuteCoder from "../../imgs/cuteCoder.png";
 import pinkLavander from "../../imgs/pinkLavander2.png";
 import selfCare from "../../imgs/selfCare.png";
 
 const highlights = [
   {
-    title: "Deep Thinking",
-    desc: "Reflections on life and meaning",
-    backgroundImage: books,
+    title: "Pink Lavander",
+    desc: "Cute Books and Cozy Vibes",
+    backgroundImage: pinkLavander,
+    link: "https://pink-lavender-publishing.vercel.app/",
   },
+
   {
-    title: "Coding Thoughts",
-    desc: "When you write code with your heart",
+    title: "Coding & Work",
+    desc: "My Portfolio and tech Stuff",
     backgroundImage: cuteCoder,
+    link: "/portfolio",
   },
   {
     title: "Self Care",
-    desc: "The language of nature as I see it",
+    desc: "Articles on mental health & self care",
     backgroundImage: selfCare,
+    link: "/articles",
   },
   {
-    title: "Pink Lavander",
-    desc: "Every small thing is worth contemplating",
-    backgroundImage: pinkLavander,
+    title: "Legal awareness",
+    desc: "Rights principles with Aisha legal tech",
+    backgroundImage: books,
+    link: "https://aisha-legal-tech.vercel.app/",
   },
 ];
 
-const HighlightCard = ({ title, desc, backgroundImage, index }) => {
+const HighlightCard = ({ title, desc, backgroundImage, index, link }) => {
   const [ref, inView] = useInView({
     threshold: 0.5,
     rootMargin: "-50% 0px 0px 0px",
     triggerOnce: true,
   });
+
+  const SAME_TAB_LINKS = ["/articles"];
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (!link) return;
+
+    if (SAME_TAB_LINKS.includes(link)) {
+      navigate(link);
+    } else {
+      window.open(link, "_blank", "noopener,noreferrer");
+    }
+  };
 
   return (
     <motion.div
@@ -58,6 +78,7 @@ const HighlightCard = ({ title, desc, backgroundImage, index }) => {
         scale: 1.05,
         boxShadow: "0 8px 20px rgba(156, 39, 176, 0.3)",
       }}
+      onClick={handleClick}
     >
       <h3>{title}</h3>
       <p>{desc}</p>
@@ -69,12 +90,13 @@ const BlogHighlights = ({ onClick }) => {
   return (
     <section className="highlights-section">
       <div className="highlights-grid">
-        {highlights.map(({ title, desc, backgroundImage }, i) => (
+        {highlights.map(({ title, desc, backgroundImage, link }, i) => (
           <HighlightCard
             key={i}
             title={title}
             desc={desc}
             backgroundImage={backgroundImage}
+            link={link}
             index={i}
           />
         ))}

@@ -14,10 +14,10 @@ const MainSections = () => {
   const navigate = useNavigate();
 
 
-  const section = location.pathname === "/" ? "hero" : location.pathname.slice(1);
+  const section = location.pathname === "/portfolio" ? "hero" : location.pathname.slice(1);
 
   const scrollToSection = (sectionName) => {
-    navigate(sectionName === "hero" ? "/" : `/${sectionName}`);
+    navigate(sectionName === "hero" ? "/portfolio" : `/portfolio/${sectionName}`);
   };
 
   useEffect(() => {

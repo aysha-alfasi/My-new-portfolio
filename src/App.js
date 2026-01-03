@@ -10,18 +10,19 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<MainSections />} />
-   
-        <Route path="/work" element={<MainSections />} />
-        <Route path="/skills" element={<MainSections />} />
-        <Route path="/contact" element={<MainSections />} />
+        <Route path="/" element={<BlogLayout />} />
 
-        <Route path="/blog" element={<BlogLayout />}>
+        <Route path="/" element={<BlogLayout />}>
           <Route index element={<BlogHome />} />
           <Route path="about" element={<AboutMe />} />
           <Route path="articles" element={<Articles />} />
           <Route path="articles/:id" element={<ArticleDetail />} />
         </Route>
+
+        <Route path="/portfolio" element={<MainSections />} />
+        <Route path="/portfolio/work" element={<MainSections />} />
+        <Route path="/portfolio/skills" element={<MainSections />} />
+        <Route path="/portfolio/contact" element={<MainSections />} />
       </Routes>
     </Router>
   );

@@ -3,7 +3,6 @@ import { Outlet, Link, NavLink } from "react-router-dom";
 import "./BlogLayout.css";
 
 function BlogLayout() {
-
   useEffect(() => {
     document.body.classList.add("blog-bg");
     document.body.classList.remove("portfolio-bg");
@@ -14,26 +13,34 @@ function BlogLayout() {
   }, []);
 
   return (
-    <div className="blog-layout pink-scrollbar" style={{ overflowY: 'scroll', height: '100vh' }}>
+    <div
+      className="blog-layout pink-scrollbar"
+      style={{ overflowY: "scroll", height: "100vh" }}
+    >
       <nav className="blog-nav">
-        <Link to="/" className="portfolio-button">
+        <Link
+          to="/portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="portfolio-button"
+        >
           My portfolio
         </Link>
         <NavLink
-          to="/blog"
+          to="/"
           className={({ isActive }) => (isActive ? "active-link" : "")}
           end
         >
           Home
         </NavLink>
         <NavLink
-          to="/blog/about"
+          to="/about"
           className={({ isActive }) => (isActive ? "active-link" : "")}
         >
           About Me
         </NavLink>
         <NavLink
-          to="/blog/articles"
+          to="/articles"
           className={({ isActive }) => (isActive ? "active-link" : "")}
         >
           Articles
@@ -47,7 +54,7 @@ function BlogLayout() {
       <footer className="blog-footer">
         <p className="blog-name">Aishense ©</p>
         <p className="footer-last-line">
-       {/*    <span>
+          {/*    <span>
             {"<"}/♡{">"}
           </span>{" "}
           Aisha */}

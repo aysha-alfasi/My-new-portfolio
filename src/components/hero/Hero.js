@@ -91,7 +91,7 @@ const Hero = ({ scrollToSection }) => {
             className="btn"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            onClick={() => window.open("/blog", "_blank")}
+            onClick={() => window.open("/articles", "_blank")}
           >
             My Blog
           </motion.button>
