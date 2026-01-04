@@ -12,6 +12,8 @@ import todo from "../../imgs/newTodo.png";
 import bookingApp from "../../imgs/g36.png";
 import backToSelf from '../../imgs/backToSelf.png';
 import assistNasma from '../../imgs/assistNasma.png';
+import pinkPub from '../../imgs/pinkLavender.png';
+import aishaLegalTech from '../../imgs/aishaLegalTech.png';
 import react from "../../imgs/icons/reactNoBorder1.png";
 import redux from "../../imgs/icons/reduxiconNoBorder1.png";
 import framerMotion from "../../imgs/icons/motion-new1.png";
@@ -78,8 +80,18 @@ const projects = [
     imageUrl: journalApp,
     category: "web",
   },
-    {
+   {
     id: 6,
+    title: "Pink Lavender",
+    description: "Charming Publisher MVP",
+    longDescription: "A cozy and inviting official website for Pink Lavender Publisher 🌸, a charming publishing house for gentle reads, stories, and planners 📚✨. First beta version with a soft, warm design crafted in Canva, supporting Arabic & English via React Context 🍒. Playful interactive alerts using SweetAlert2 💖🌿. A real, live site, not just a practice project.🥰",
+    techIcons: [react],
+    link: "https://pink-lavender-publishing.vercel.app/",
+    imageUrl: pinkPub,
+    category: "web",
+  },
+    {
+    id: 7,
     title: "Nasma Assist",
     description: " cute mood App (WIP)",
     longDescription: "A friendly React app featuring Nasma, a cute assistant who helps track moods and build habits 💖. Users can pick moods, hear playful sounds, and see Nasma’s reactions ✨. Built with React and Framer Motion, this project is still in progress with planned features like habit tracking, goals, and a calendar 🌱📆.",
@@ -90,30 +102,18 @@ const projects = [
     category: "web",
   },
    {
-    id: 7,
-    title: "The Purple Card",
-    description: "Fun DApp",
-    longDescription:
-      "A playful idea-tracking app where users can manage idea cards 💭✨. Built with React and sound/alert effects for a fun UX. The backend runs on Motoko via DFINITY’s Internet Computer 💻🎉 — and there’s room for future magic! 🌈",
-    techIcons: [react, definity, motoko],
-    link: "https://the-purple-card-frontend.vercel.app/",
-    githubLink:
-      "https://github.com/aysha-alfasi/The-purple-card-full-DApp-project",
-    imageUrl: purple,
-    category: "web",
-  },
-  {
     id: 8,
-    title: "Miss Tasks App!",
-    description: "Simple full-stack app",
-    longDescription:
-      "Miss Tasks is a gentle productivity app that chats with you about your day 🌸💬. It responds to your mood using sentiment analysis and offers kind, supportive replies. Built with React, Bootstrap, and a Node.js backend with custom emotional logic 💡📝.",
-    techIcons: [react, node, express],
-    /* link: "https://miss-tasks-app.onrender.com/", */
-    githubLink: "https://github.com/aysha-alfasi/Miss-tasks-app-",
-    imageUrl: missTasks,
+    title: "Back to Self",
+    description: "Cozy digital journal",
+    longDescription: "A cozy digital journal built with React 📖✨. Users can write, view, edit, and delete their reflections 💌. It features daily messages, smooth page-turn animations, and calming paper-flip sounds 🍃. Local storage keeps everything safe in the browser 💾.",
+    techIcons: [react, framerMotion],
+    link: "https://back-to-self-app.vercel.app/",
+    githubLink: "https://github.com/aysha-alfasi/back-to-self-App",
+    imageUrl: backToSelf,
     category: "web",
   },
+  
+  
   {
     id: 9,
     title: "Teddy Tracker",
@@ -135,15 +135,14 @@ const projects = [
     category: "graphic",
   },
 
-    {
+   {
     id: 11,
-    title: "Back to Self",
-    description: "Cozy digital journal",
-    longDescription: "A cozy digital journal built with React 📖✨. Users can write, view, edit, and delete their reflections 💌. It features daily messages, smooth page-turn animations, and calming paper-flip sounds 🍃. Local storage keeps everything safe in the browser 💾.",
-    techIcons: [react, framerMotion],
-    link: "https://back-to-self-app.vercel.app/",
-    githubLink: "https://github.com/aysha-alfasi/back-to-self-App",
-    imageUrl: backToSelf,
+    title: "Aisha Legal Tech",
+    description: "Legal awareness platform",
+    longDescription: "A friendly beta platform for Aisha Legal Tech ⚖️✨, helping users learn their legal rights and take first steps safely 📝🌿. Features Aisha, a focused chatbot 🤖💬 powered by serverless functions, guiding legal queries precisely 🌸💛. Includes interactive scenario-based quizzes 🎲📚 and a rights selector to explore your options. Built with React & Tailwind CSS, this early beta version brings core features to life 💖📜. A playful, evolving, real live platform, not just a practice project 🫶.",
+    techIcons: [react],
+    link: "https://aisha-legal-tech.vercel.app/",
+    imageUrl: aishaLegalTech,
     category: "web",
   },
   
@@ -168,6 +167,31 @@ const projects = [
     category: "uiux",
   },
 
+   {
+    id:14,
+    title: "The Purple Card",
+    description: "Fun DApp",
+    longDescription:
+      "A playful idea-tracking app where users can manage idea cards 💭✨. Built with React and sound/alert effects for a fun UX. The backend runs on Motoko via DFINITY’s Internet Computer 💻🎉 — and there’s room for future magic! 🌈",
+    techIcons: [react, definity, motoko],
+    link: "https://the-purple-card-frontend.vercel.app/",
+    githubLink:
+      "https://github.com/aysha-alfasi/The-purple-card-full-DApp-project",
+    imageUrl: purple,
+    category: "web",
+  },
+  {
+    id: 15,
+    title: "Miss Tasks App!",
+    description: "Simple full-stack app",
+    longDescription:
+      "Miss Tasks is a gentle productivity app that chats with you about your day 🌸💬. It responds to your mood using sentiment analysis and offers kind, supportive replies. Built with React, Bootstrap, and a Node.js backend with custom emotional logic 💡📝.",
+    techIcons: [react, node, express],
+    /* link: "https://miss-tasks-app.onrender.com/", */
+    githubLink: "https://github.com/aysha-alfasi/Miss-tasks-app-",
+    imageUrl: missTasks,
+    category: "web",
+  },
 ];
 
 const WorkSection = () => {

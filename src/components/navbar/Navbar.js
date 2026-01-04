@@ -6,7 +6,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const goTo = (section) => {
-    navigate(section === "hero" ? "/" : `/${section}`);
+   navigate(section === "hero" ? "/portfolio" : `/portfolio/${section}`);
   };
 
   return (

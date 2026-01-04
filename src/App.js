@@ -10,8 +10,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<BlogLayout />} />
-
         <Route path="/" element={<BlogLayout />}>
           <Route index element={<BlogHome />} />
           <Route path="about" element={<AboutMe />} />
@@ -19,10 +17,7 @@ function App() {
           <Route path="articles/:id" element={<ArticleDetail />} />
         </Route>
 
-        <Route path="/portfolio" element={<MainSections />} />
-        <Route path="/portfolio/work" element={<MainSections />} />
-        <Route path="/portfolio/skills" element={<MainSections />} />
-        <Route path="/portfolio/contact" element={<MainSections />} />
+        <Route path="/portfolio/*" element={<MainSections />} />
       </Routes>
     </Router>
   );

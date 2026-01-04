@@ -14,7 +14,10 @@ const MainSections = () => {
   const navigate = useNavigate();
 
 
-  const section = location.pathname === "/portfolio" ? "hero" : location.pathname.slice(1);
+  const section =
+    location.pathname === "/portfolio"
+      ? "hero"
+      : location.pathname.replace("/portfolio/", "");
 
   const scrollToSection = (sectionName) => {
     navigate(sectionName === "hero" ? "/portfolio" : `/portfolio/${sectionName}`);
@@ -40,9 +43,8 @@ const MainSections = () => {
         overflowX: "hidden",
       }}
     >
-     
-     {section !== "hero" && <Navbar />}
-     {section === "hero" && <Hero scrollToSection={scrollToSection} />}
+      {section !== "hero" && <Navbar />}
+      {section === "hero" && <Hero scrollToSection={scrollToSection} />}
       {section === "work" && <WorkSection scrollToSection={scrollToSection} />}
       {section === "skills" && (
         <motion.div key="skills" transition={{ duration: 0.5 }}>
