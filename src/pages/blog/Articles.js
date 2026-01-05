@@ -39,7 +39,7 @@ const Articles = () => {
 
               <p className="summary">{article.summary}</p>
 
-              <Link to={`/blog/articles/${article.id}`} className="read-more">
+              <Link to={`/articles/${article.id}`} className="read-more">
                 Read more<span className="read-more-icon">🌸</span>
               </Link>
 
