@@ -39,16 +39,6 @@ const projects = [
   },
   {
     id: 2,
-    title: "The Purple Card UI",
-    description: "UI Snapshot",
-    longDescription: "The homepage UI for The Purple Card App 💜. I first designed it in Figma, then turned it into a working app 🎨✨, showing it just as envisioned 💻🌟.",
-    techIcons: [figma],
-    link: "https://www.figma.com/proto/3A5RCZ4FeBeNpLI2CbJOv1/The-Purple-Card-%F0%9F%9B%B8?node-id=4-69&t=SC3eNmcSWr3vM56L-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
-    imageUrl: purpleUI,
-    category: "uiux",
-  },
-  {
-    id: 3,
     title: "Miss Tasks UI",
     description: "UI Preview",
     longDescription: "A soft and friendly UI for Miss Tasks 🌸💬. The Figma design shows the app’s gentle, supportive style and how users interact with mood-based chat and productivity features 💡✨. Note: The final design differ slightly from the live app 💻📝.",
@@ -58,7 +48,7 @@ const projects = [
     category: "uiux",
   },
   {
-    id: 4,
+    id: 3,
     title: "Todo List",
     description: "Cute Todo project",
     longDescription:
@@ -70,7 +60,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 5,
+    id: 4,
     title: "Journaling App",
     description: "full-stack Journal App",
     longDescription:
@@ -81,7 +71,7 @@ const projects = [
     category: "web",
   },
    {
-    id: 6,
+    id: 5,
     title: "Pink Lavender",
     description: "Charming Publisher MVP",
     longDescription: "A cozy and inviting official website for Pink Lavender Publisher 🌸, a charming publishing house for gentle reads, stories, and planners 📚✨. First beta version with a soft, warm design crafted in Canva, supporting Arabic & English via React Context 🍒. Playful interactive alerts using SweetAlert2 💖🌿. A real, live site, not just a practice project.🥰",
@@ -91,7 +81,7 @@ const projects = [
     category: "web",
   },
     {
-    id: 7,
+    id: 6,
     title: "Nasma Assist",
     description: " cute mood App (WIP)",
     longDescription: "A friendly React app featuring Nasma, a cute assistant who helps track moods and build habits 💖. Users can pick moods, hear playful sounds, and see Nasma’s reactions ✨. Built with React and Framer Motion, this project is still in progress with planned features like habit tracking, goals, and a calendar 🌱📆.",
@@ -102,7 +92,7 @@ const projects = [
     category: "web",
   },
    {
-    id: 8,
+    id: 7,
     title: "Back to Self",
     description: "Cozy digital journal",
     longDescription: "A cozy digital journal built with React 📖✨. Users can write, view, edit, and delete their reflections 💌. It features daily messages, smooth page-turn animations, and calming paper-flip sounds 🍃. Local storage keeps everything safe in the browser 💾.",
@@ -115,7 +105,7 @@ const projects = [
   
   
   {
-    id: 9,
+    id: 8,
     title: "Teddy Tracker",
     description: "Daily Self-Check",
     longDescription: "A cozy daily reflection design 🐻🛏️. The sleepy teddy rests under a blanket that looks like a soft panel. Each panel highlights a personal value, like patience, kindness, optimism, or wisdom, with a gentle question related to each value underneath 🌙✨. A playful and comforting way to reflect on your day, track your habits, and continuously improve yourself before bedtime 💛💭.",
@@ -125,7 +115,7 @@ const projects = [
     category: "graphic",
   },
   {
-    id: 10,
+    id: 9,
     title: "Miss Tasks’ Plan",
     description: "3-Sheet Strategy",
     longDescription: "A smart and playful way to track your progress all year with just three sheets 📒💡. Miss Tasks guides you through daily tasks, monthly reflections, and yearly reviews, providing a simple yet effective strategy to stay on top of your goals 🌸📝. A fun companion for organizing your achievements and celebrating progress 💛🎉.",
@@ -136,7 +126,7 @@ const projects = [
   },
 
    {
-    id: 11,
+    id: 10,
     title: "Aisha Legal Tech",
     description: "Legal awareness platform",
     longDescription: "A friendly beta platform for Aisha Legal Tech ⚖️✨, helping users learn their legal rights and take first steps safely 📝🌿. Features Aisha, a focused chatbot 🤖💬 powered by serverless functions, guiding legal queries precisely 🌸💛. Includes interactive scenario-based quizzes 🎲📚 and a rights selector to explore your options. Built with React & Tailwind CSS, this early beta version brings core features to life 💖📜. A playful, evolving, real live platform, not just a practice project 🫶.",
@@ -147,7 +137,7 @@ const projects = [
   },
   
    {
-    id: 12,
+    id: 11,
     title: "Nasma Assist",
     description: "Co-Designed with AI",
     longDescription: "Nasma Assist is a cute character designing project 🌟 where I started by generating a base image with AI 💭✨. Then, I refined the design in Inkscape, adding clothes, details, and multiple facial expressions😄🎨. Fully personalized, ready to bring life and mood to any app! 🌈",
@@ -157,7 +147,7 @@ const projects = [
     category: "graphic",
   },
   {
-    id: 13,
+    id: 12,
     title: "Nasma Assist UI",
     description: "Interactive UI (WIP)",
     longDescription: "A friendly UI for Nasma Assist, the cute mood-tracking app in progress 💖. The Figma design shows several app pages (some not yet developed in the live app), giving a peek at planned features like a calendar and habit tracking ✨🌱. A fun and interactive glimpse at the interface, still a work in progress 💻📆.",
@@ -168,7 +158,7 @@ const projects = [
   },
 
    {
-    id:14,
+    id:13,
     title: "The Purple Card",
     description: "Fun DApp",
     longDescription:
@@ -181,7 +171,7 @@ const projects = [
     category: "web",
   },
   {
-    id: 15,
+    id: 14,
     title: "Miss Tasks App!",
     description: "Simple full-stack app",
     longDescription:
