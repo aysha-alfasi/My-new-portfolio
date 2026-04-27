@@ -5,7 +5,6 @@ import ProjectModal from "../UI/ProjectModal.js";
 import Spinner from "../UI/Spinner.js";
 import journalApp from "../../imgs/g28.png";
 import purple from "../../imgs/path1.png";
-import purpleUI from "../../imgs/path2.png";
 import missTasks from "../../imgs/g2.png";
 import Beary from "../../imgs/image1.png";
 import todo from "../../imgs/newTodo.png";
