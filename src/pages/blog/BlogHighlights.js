@@ -13,7 +13,7 @@ const highlights = [
     title: "Pink Lavander",
     desc: "Cute Books and Cozy Vibes",
     backgroundImage: pinkLavander,
-    link: "https://pink-lavender-publishing.vercel.app/",
+    link: "https://pinklavender.aishense.com",
   },
 
   {
@@ -32,7 +32,7 @@ const highlights = [
     title: "Legal awareness",
     desc: "Rights principles with Aisha legal tech",
     backgroundImage: books,
-    link: "https://aisha-legal-tech.vercel.app/",
+    link: "https://legal.aishense.com",
   },
 ];
 
