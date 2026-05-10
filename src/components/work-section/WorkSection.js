@@ -191,7 +191,7 @@ const projects = [
     techIcons: [react, inkscape],
     link: "https://www.asmaaedu.org/",
     /*  githubLink: "https://github.com/aysha-alfasi/Miss-tasks-app-", */
-    imageUrl: asmaClass,
+    imageUrl: asmaaClass,
     category: "web",
   },
 ];
