@@ -47,8 +47,20 @@ const projects = [
     imageUrl: missTasks,
     category: "uiux",
   },
-  {
+    {
     id: 3,
+    title: "Asmaa Class",
+    description: "Mindful Booking Solution",
+    longDescription:
+      "A friendly React app built as a special gift for my sister to provide a lovely problem-solving tool for her tutoring sessions 🎁✨. It focuses on making everything easier by streamlining the booking flow and integrates Google Meet to automatically generate lesson links for a more organized and happy teaching space 🌸💻. To make it even more special, I designed a matching physical gift card with a QR code, beautifully bridging the gap between elegant branding and functional digital solutions 💌🌱.",
+    techIcons: [react, inkscape],
+    link: "https://www.asmaaedu.org/",
+    /*  githubLink: "https://github.com/aysha-alfasi/Miss-tasks-app-", */
+    imageUrl: asmaaClass,
+    category: "web",
+  },
+  {
+    id: 4,
     title: "Todo List",
     description: "Cute Todo project",
     longDescription:
@@ -57,17 +69,6 @@ const projects = [
     link: "https://my-todo-app-one-kappa.vercel.app/",
     githubLink: "https://github.com/aysha-alfasi/my-todo-app",
     imageUrl: todo,
-    category: "web",
-  },
-  {
-    id: 4,
-    title: "Journaling App",
-    description: "full-stack Journal App",
-    longDescription:
-      "A cozy personal journal app built with React, Ant Design, and PostgreSQL. Users can write, edit, and explore their entries with moods 🌿💭. It includes mood stats 📊, secure login, and smooth UX powered by custom hooks and Redux Toolkit.",
-    techIcons: [react, redux, node, express, postgre],
-    githubLink: "https://github.com/aysha-alfasi/personal-journal-app",
-    imageUrl: journalApp,
     category: "web",
   },
    {
@@ -183,15 +184,14 @@ const projects = [
     category: "web",
   },
   {
-    id: 15,
-    title: "Asmaa Class",
-    description: "Mindful Booking Solution",
+   id: 15,
+    title: "Journaling App",
+    description: "full-stack Journal App",
     longDescription:
-      "A friendly React app built as a special gift for my sister to provide a lovely problem-solving tool for her tutoring sessions 🎁✨. It focuses on making everything easier by streamlining the booking flow and integrates Google Meet to automatically generate lesson links for a more organized and happy teaching space 🌸💻. To make it even more special, I designed a matching physical gift card with a QR code, beautifully bridging the gap between elegant branding and functional digital solutions 💌🌱.",
-    techIcons: [react, inkscape],
-    link: "https://www.asmaaedu.org/",
-    /*  githubLink: "https://github.com/aysha-alfasi/Miss-tasks-app-", */
-    imageUrl: asmaaClass,
+      "A cozy personal journal app built with React, Ant Design, and PostgreSQL. Users can write, edit, and explore their entries with moods 🌿💭. It includes mood stats 📊, secure login, and smooth UX powered by custom hooks and Redux Toolkit.",
+    techIcons: [react, redux, node, express, postgre],
+    githubLink: "https://github.com/aysha-alfasi/personal-journal-app",
+    imageUrl: journalApp,
     category: "web",
   },
 ];
