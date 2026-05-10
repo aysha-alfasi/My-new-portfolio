@@ -6,6 +6,7 @@ import Spinner from "../UI/Spinner.js";
 import journalApp from "../../imgs/g28.png";
 import purple from "../../imgs/path1.png";
 import missTasks from "../../imgs/g2.png";
+import asmaaClass from "../../imgs/asmaaClass.png";
 import Beary from "../../imgs/image1.png";
 import todo from "../../imgs/newTodo.png";
 import bookingApp from "../../imgs/g36.png";
@@ -179,6 +180,18 @@ const projects = [
     /* link: "https://miss-tasks-app.onrender.com/", */
     githubLink: "https://github.com/aysha-alfasi/Miss-tasks-app-",
     imageUrl: missTasks,
+    category: "web",
+  },
+  {
+    id: 15,
+    title: "Asmaa Class",
+    description: "Mindful Booking Solution",
+    longDescription:
+      "A friendly React app built as a special gift for my sister to provide a lovely problem-solving tool for her tutoring sessions 🎁✨. It focuses on making everything easier by streamlining the booking flow and integrates Google Meet to automatically generate lesson links for a more organized and happy teaching space 🌸💻. To make it even more special, I designed a matching physical gift card with a QR code, beautifully bridging the gap between elegant branding and functional digital solutions 💌🌱.",
+    techIcons: [react, inkscape],
+    link: "https://www.asmaaedu.org/",
+    /*  githubLink: "https://github.com/aysha-alfasi/Miss-tasks-app-", */
+    imageUrl: asmaClass,
     category: "web",
   },
 ];
