@@ -59,8 +59,18 @@ const projects = [
     imageUrl: asmaaClass,
     category: "web",
   },
-  {
+   {
     id: 4,
+    title: "Pink Lavender",
+    description: "Charming Publisher MVP",
+    longDescription: "A cozy and inviting official website for Pink Lavender Publisher 🌸, a charming publishing house for gentle reads, stories, and planners 📚✨. First beta version with a soft, warm design crafted in Canva, supporting Arabic & English via React Context 🍒. Playful interactive alerts using SweetAlert2 💖🌿. A real, live site, not just a practice project.🥰",
+    techIcons: [react],
+    link: "https://pink-lavender-publishing.vercel.app/",
+    imageUrl: pinkPub,
+    category: "web",
+  },
+  {
+    id: 5,
     title: "Todo List",
     description: "Cute Todo project",
     longDescription:
@@ -69,16 +79,6 @@ const projects = [
     link: "https://my-todo-app-one-kappa.vercel.app/",
     githubLink: "https://github.com/aysha-alfasi/my-todo-app",
     imageUrl: todo,
-    category: "web",
-  },
-   {
-    id: 5,
-    title: "Pink Lavender",
-    description: "Charming Publisher MVP",
-    longDescription: "A cozy and inviting official website for Pink Lavender Publisher 🌸, a charming publishing house for gentle reads, stories, and planners 📚✨. First beta version with a soft, warm design crafted in Canva, supporting Arabic & English via React Context 🍒. Playful interactive alerts using SweetAlert2 💖🌿. A real, live site, not just a practice project.🥰",
-    techIcons: [react],
-    link: "https://pink-lavender-publishing.vercel.app/",
-    imageUrl: pinkPub,
     category: "web",
   },
     {
