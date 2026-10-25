@@ -35,7 +35,7 @@ const Articles = () => {
             <div className="article-content">
               <h2>
                 <Link
-                  to={`/blog/articles/${article.id}`}
+                  to={`/articles/${article.id}`}
                   className="article-title-link"
                 >
                   {article.title}
