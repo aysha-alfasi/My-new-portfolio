@@ -6,11 +6,16 @@ const Articles = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetch("/data/articles.json")
-      .then((res) => res.json())
-      .then((data) => setArticles(data))
-      .catch((error) => console.error("Error fetching articles:", error));
-  }, []);
+  fetch("/data/articles.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const sorted = [...data].sort(
+        (a, b) => new Date(b.date) - new Date(a.date)
+      );
+      setArticles(sorted);
+    })
+    .catch((error) => console.error("Error fetching articles:", error));
+}, []);
 
   return (
     <div className="articles-page">
