@@ -32,12 +32,11 @@ const ArticleDetail = () => {
         className="content-detail"
         dangerouslySetInnerHTML={{ __html: article.content }}
       ></div>
-
       {article.extraImage && (
         <div className="extra-image-wrapper">
           <img
             src={article.extraImage}
-            alt={article.title}
+            alt="extra-image"
             className="article-extra-image"
           />
         </div>
